@@ -1,1 +1,1 @@
-Content of CHECKLISTS.md goes here
+<content-of-CHECKLISTS.md>
