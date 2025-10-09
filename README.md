@@ -30,13 +30,13 @@ Documentos técnicos aprofundados com tutoriais práticos, exemplos de código e
 
 | Documento | Descrição | Tamanho | Economia/ano |
 |-----------|-----------|---------|--------------|
-| **[MCPS-APIS.md](21-github-and-copilot-tech/MCPS-APIS.md)** | Model Context Protocol, GitHub Copilot, APIs gratuitas | 11 KB | R$ 33k-73k |
-| **[CERTIFICATIONS-TECH.md](21-github-and-copilot-tech/CERTIFICATIONS-TECH.md)** | Certificações cloud, DevOps, ML com descontos | 16 KB | R$ 20k-30k |
-| **[DATA-ML-TOOLS.md](21-github-and-copilot-tech/DATA-ML-TOOLS.md)** | GPUs grátis, MLOps, datasets, deployment | 19 KB | R$ 66k-136k |
-| [AI-LLMS.md](21-github-and-copilot-tech/AI-LLMS.md) | Modelos de IA e LLMs para estudantes | 4 KB | R$ 6k-10k |
-| [CLOUD-COMPUTE.md](21-github-and-copilot-tech/CLOUD-COMPUTE.md) | Azure, GCP, AWS setup completo | 3 KB | R$ 8k-10k |
-| [DEV-TOOLS.md](21-github-and-copilot-tech/DEV-TOOLS.md) | IDEs, editores, ferramentas desenvolvimento | 3 KB | R$ 10k-15k |
-| [CURSOS-TECH.md](21-github-and-copilot-tech/CURSOS-TECH.md) | Melhores cursos técnicos gratuitos/descontados | - | R$ 5k-10k |
+| **[MCPS-APIS.md](01-TECH-PROFUNDO/MCPS-APIS.md)** | Model Context Protocol, GitHub Copilot, APIs gratuitas | 11 KB | R$ 33k-73k |
+| **[CERTIFICATIONS-TECH.md](01-TECH-PROFUNDO/CERTIFICATIONS-TECH.md)** | Certificações cloud, DevOps, ML com descontos | 16 KB | R$ 20k-30k |
+| **[DATA-ML-TOOLS.md](01-TECH-PROFUNDO/DATA-ML-TOOLS.md)** | GPUs grátis, MLOps, datasets, deployment | 19 KB | R$ 66k-136k |
+| [AI-LLMS.md](01-TECH-PROFUNDO/AI-LLMS.md) | Modelos de IA e LLMs para estudantes | 4 KB | R$ 6k-10k |
+| [CLOUD-COMPUTE.md](01-TECH-PROFUNDO/CLOUD-COMPUTE.md) | Azure, GCP, AWS setup completo | 3 KB | R$ 8k-10k |
+| [DEV-TOOLS.md](01-TECH-PROFUNDO/DEV-TOOLS.md) | IDEs, editores, ferramentas desenvolvimento | 3 KB | R$ 10k-15k |
+| [CURSOS-TECH.md](01-TECH-PROFUNDO/CURSOS-TECH.md) | Melhores cursos técnicos gratuitos/descontados | - | R$ 5k-10k |
 
 **Total Tech-Profundo**: 65+ KB de conteúdo técnico, 50+ exemplos de código, 25+ tabelas comparativas
 
@@ -44,10 +44,10 @@ Documentos técnicos aprofundados com tutoriais práticos, exemplos de código e
 
 Documentos para navegação e planejamento:
 
-- **[GUIA-COMPLETO.md](10-product-guide/GUIA-COMPLETO.md)**: Visão geral de todas as categorias
-- **[TOP-50-PRIORIDADES.md](10-product-guide/TOP-50-PRIORIDADES.md)**: O que fazer primeiro (hoje, semana, mês)
-- **[ECONOMIA-CALCULADA.md](10-product-guide/ECONOMIA-CALCULADA.md)**: Breakdown detalhado de economias
-- **[Governance & Origins](00-governance-and-origins/)**: Histórico, protocolos, e decisões do projeto
+- **[GUIA-COMPLETO.md](GUIA-COMPLETO.md)**: Visão geral de todas as categorias
+- **[TOP-50-PRIORIDADES.md](TOP-50-PRIORIDADES.md)**: O que fazer primeiro (hoje, semana, mês)
+- **[ECONOMIA-CALCULADA.md](ECONOMIA-CALCULADA.md)**: Breakdown detalhado de economias
+- **[00-VISAO-GERAL/](00-VISAO-GERAL/)**: Checklists, Brasil-específico, processo executivo
 
 ## ⚡ Quick Start (Ação Imediata)
 
@@ -75,67 +75,48 @@ Documentos para navegação e planejamento:
 
 ### Esta Semana
 
-5. Configure [MCPs com GitHub Copilot](21-github-and-copilot-tech/MCPS-APIS.md#configuração-prática)
-6. Obtenha [créditos em APIs de IA](21-github-and-copilot-tech/MCPS-APIS.md#apis-com-créditos-para-estudantes)
-7. Comece [certificação Azure gratuita](21-github-and-copilot-tech/CERTIFICATIONS-TECH.md#microsoft-azure)
-8. Setup [GPUs gratuitas](21-github-and-copilot-tech/DATA-ML-TOOLS.md#gpus-e-compute-gratuitos)
+5. Configure [MCPs com GitHub Copilot](01-TECH-PROFUNDO/MCPS-APIS.md#configuração-prática)
+6. Obtenha [créditos em APIs de IA](01-TECH-PROFUNDO/MCPS-APIS.md#apis-com-créditos-para-estudantes)
+7. Comece [certificação Azure gratuita](01-TECH-PROFUNDO/CERTIFICATIONS-TECH.md#microsoft-azure)
+8. Setup [GPUs gratuitas](01-TECH-PROFUNDO/DATA-ML-TOOLS.md#gpus-e-compute-gratuitos)
 
 ### Este Mês
 
-9. Complete 2-3 [certificações cloud](21-github-and-copilot-tech/CERTIFICATIONS-TECH.md)
-10. Configure [pipeline MLOps](21-github-and-copilot-tech/DATA-ML-TOOLS.md#plataformas-mlops)
-11. Deploy [primeiro projeto](21-github-and-copilot-tech/DATA-ML-TOOLS.md#model-deployment)
-12. Aplique para [programas de pesquisa](21-github-and-copilot-tech/AI-LLMS.md#estratégias-para-estudantes)
+9. Complete 2-3 [certificações cloud](01-TECH-PROFUNDO/CERTIFICATIONS-TECH.md)
+10. Configure [pipeline MLOps](01-TECH-PROFUNDO/DATA-ML-TOOLS.md#plataformas-mlops)
+11. Deploy [primeiro projeto](01-TECH-PROFUNDO/DATA-ML-TOOLS.md#model-deployment)
+12. Aplique para [programas de pesquisa](01-TECH-PROFUNDO/AI-LLMS.md#estratégias-para-estudantes)
 
 ## 🗂 Estrutura do Repositório
 
 ```
 beneficios-estudantis-completo-2025/
 │
-├── 📋 README.md                         # Este arquivo
-├── 📝 CHANGELOG.md                      # Histórico de mudanças
-├── ⚙️  reorg-spec.yaml                   # Especificação de organização
+├── GUIA-COMPLETO.md              # Visão geral navegável
+├── TOP-50-PRIORIDADES.md         # Lista priorizada
+├── ECONOMIA-CALCULADA.md         # Valores detalhados
 │
-├── 00-governance-and-origins/           # 🏛️ Governança e origens
-│   ├── 01-conversations/                # Conversas e decisões originais
-│   ├── 02-source-extractions/           # Extrações de fontes
-│   ├── 03-protocols/                    # Protocolos operacionais
-│   └── 04-templates/                    # Templates reutilizáveis
+├── 00-VISAO-GERAL/               # Documentos gerais
+│   ├── README.md
+│   ├── CHECKLISTS.md
+│   ├── BRASIL-ESPECIFICO.md
+│   └── PROCESSO-EXECUTIVO.md    # Como este repo foi criado
 │
-├── 10-product-guide/                    # 📚 Guia do produto
-│   ├── GUIA-COMPLETO.md                 # Visão geral navegável
-│   ├── TOP-50-PRIORIDADES.md            # Lista priorizada
-│   ├── ECONOMIA-CALCULADA.md            # Valores detalhados
-│   └── assets/                          # Recursos visuais
+├── 01-TECH-PROFUNDO/             # Conteúdo técnico aprofundado ⭐
+│   ├── MCPS-APIS.md             # 11KB - MCPs + GitHub Copilot
+│   ├── CERTIFICATIONS-TECH.md   # 16KB - Certificações técnicas
+│   ├── DATA-ML-TOOLS.md         # 19KB - ML/Data Science
+│   ├── AI-LLMS.md               # IA e Large Language Models
+│   ├── CLOUD-COMPUTE.md         # Azure, GCP, AWS
+│   ├── DEV-TOOLS.md             # IDEs e ferramentas dev
+│   └── CURSOS-TECH.md           # Cursos técnicos avaliados
 │
-├── 20-github-education-analyses/        # 🔍 Análises GitHub Education (NOVO)
-│   └── [análises em desenvolvimento]    # Deep dives em programas educacionais
-│
-├── 21-github-and-copilot-tech/          # 🛠️ Tech GitHub e Copilot (NOVO)
-│   ├── MCPS-APIS.md                     # 11KB - MCPs + GitHub Copilot ⭐
-│   ├── CERTIFICATIONS-TECH.md           # 16KB - Certificações técnicas ⭐
-│   ├── DATA-ML-TOOLS.md                 # 19KB - ML/Data Science ⭐
-│   ├── AI-LLMS.md                       # IA e Large Language Models
-│   ├── CLOUD-COMPUTE.md                 # Azure, GCP, AWS
-│   ├── DEV-TOOLS.md                     # IDEs e ferramentas dev
-│   ├── CURSOS-TECH.md                   # Cursos técnicos
-│   ├── 01-techniques/                   # Catálogo de técnicas
-│   ├── 02-operations-logs/              # Logs de operações
-│   └── 03-how-to/                       # Guias práticos
-│
-├── 30-data/                             # 📊 Dados estruturados
-│   ├── datasets/                        # Conjuntos de dados
-│   └── dictionaries/                    # Dicionários de dados
-│
-├── 40-scripts/                          # 🤖 Scripts de automação
-│   └── reorg.py                         # Script de reorganização
-│
-└── 90-archive/                          # 📦 Arquivo
-    ├── duplicates/                      # Arquivos duplicados
-    └── legacy/                          # Conteúdo legado
+└── 99-REGISTROS-HISTORICOS/      # Histórico e decisões
+    ├── README.md
+    └── [conversas documentadas]
 ```
 
-**Legenda**: ⭐ = Conteúdo expandido e aprofundado | (NOVO) = Nova área de conhecimento
+**Legenda**: ⭐ = Conteúdo expandido e aprofundado
 
 ## 💡 Por Que Este Guia é Único?
 

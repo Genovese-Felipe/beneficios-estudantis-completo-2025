@@ -1,7 +1,7 @@
 # Top Tech Courses for Students
 
 ## Machine Learning Courses
-1. **[Andrew Ng Coursera ML Specialization](https://www.coursera.org/specializations/machine-learning)**  
+1. **[Andrew Ng Coursera ML Specialization](https://www.coursera.org/specializations/machine-learning)  
    - **Rating:** 4.9/5  
    - **Time to Complete:** 3 months  
    - **Certificate:** Yes  
