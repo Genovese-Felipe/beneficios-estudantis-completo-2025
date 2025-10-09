@@ -1,0 +1,7 @@
+current_path,proposed_path,confidence,reason,action
+99-REGISTROS-HISTORICOS/README.md,00-foundation-origins/conversations/raw/historical-readme.md,high,Rename folder to better reflect its foundational role; move README into conversations for context,move
+99-REGISTROS-HISTORICOS/02 Servidor MCP e Beneficios Estudante Github Copilot - Copia 2.md,00-foundation-origins/conversations/raw/2025-01-08-mcp-server-discussion.md,high,Move conversation to new structure with descriptive name and date,move
+99-REGISTROS-HISTORICOS/Servidor MCP e Beneficios Estudante Github Copilot - Copia 1.md,00-foundation-origins/conversations/raw/2025-01-08-mcp-benefits-discussion-v1.md,high,Move conversation to new structure with descriptive name,move
+00-VISAO-GERAL/BRASIL-ESPECIFICO.md,archive/BRASIL-ESPECIFICO.md,low,Empty placeholder file - archive or delete,delete
+00-VISAO-GERAL/GUIA-COMPLETO.md,archive/GUIA-COMPLETO-old.md,medium,Duplicate of root GUIA-COMPLETO.md - archive old version,delete
+00-VISAO-GERAL/CHECKLISTS.md,00-VISAO-GERAL/CHECKLISTS.md,high,Keep and populate with content,propose

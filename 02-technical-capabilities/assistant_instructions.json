@@ -1,0 +1,284 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "version": "1.0.0",
+  "category": "02-technical-capabilities",
+  "generated_by": "GitHub Copilot (AI assistant)",
+  "generation_date": "2025-10-09",
+  "note": "Copilot is powered by AI; mistakes are possible. Review carefully.",
+  
+  "purpose": {
+    "description": "Instructions for AI agents working on skills-based technical capability content",
+    "focus": "Organize by capability/skill domain, not by vendor or platform"
+  },
+  
+  "key_principles": {
+    "organization": [
+      "Group by technical capability (e.g., 'Cloud Computing' not 'AWS vs Azure')",
+      "Provide cross-platform comparisons within each capability",
+      "Focus on skills students can develop, not just tools",
+      "Create clear learning progressions (beginner → intermediate → advanced)",
+      "Link capabilities to career outcomes"
+    ],
+    
+    "neutrality": [
+      "Present multiple platform options fairly",
+      "Base recommendations on student needs, not vendor preferences",
+      "Acknowledge trade-offs between options",
+      "Update when platform landscape changes"
+    ],
+    
+    "practicality": [
+      "Emphasize free/student resources",
+      "Provide hands-on project ideas",
+      "Include real-world use cases",
+      "Connect to job market demand"
+    ]
+  },
+  
+  "content_structure": {
+    "capability_file_template": {
+      "required_sections": [
+        "Overview: What is this capability?",
+        "Core Skills: What you'll learn",
+        "Career Paths: Where this leads",
+        "Free Resources: Student-accessible platforms",
+        "Learning Path: Beginner to Advanced",
+        "Project Ideas: Hands-on practice",
+        "Certifications: Industry recognition",
+        "Estimated Value: Economic impact"
+      ]
+    },
+    
+    "platform_comparison_format": {
+      "structure": "Table or structured comparison",
+      "criteria": [
+        "Free tier/credits for students",
+        "Learning curve",
+        "Industry adoption",
+        "Community support",
+        "Certification value",
+        "Best for (use case)"
+      ]
+    },
+    
+    "learning_path_format": {
+      "stages": ["Beginner", "Intermediate", "Advanced"],
+      "each_stage_includes": [
+        "Skills to master",
+        "Recommended resources",
+        "Time estimate",
+        "Success criteria",
+        "Project milestone"
+      ]
+    }
+  },
+  
+  "capabilities_covered": {
+    "primary": [
+      "cloud-computing",
+      "data-science-ml",
+      "web-development",
+      "devops-sre",
+      "cybersecurity",
+      "mobile-development",
+      "game-development",
+      "ai-llm-development"
+    ],
+    
+    "emerging": [
+      "quantum-computing",
+      "blockchain-development",
+      "ar-vr-development",
+      "iot-embedded-systems"
+    ],
+    
+    "foundational": [
+      "programming-fundamentals",
+      "data-structures-algorithms",
+      "system-design",
+      "software-engineering-practices"
+    ]
+  },
+  
+  "platform_coverage_guidelines": {
+    "cloud_computing": {
+      "must_include": ["Azure", "AWS", "Google Cloud"],
+      "should_include": ["DigitalOcean", "Heroku", "Vercel/Netlify"],
+      "nice_to_have": ["Oracle Cloud", "IBM Cloud"]
+    },
+    
+    "data_science_ml": {
+      "must_include": ["Google Colab", "Kaggle", "Jupyter"],
+      "should_include": ["DataCamp", "Weights & Biases", "HuggingFace"],
+      "nice_to_have": ["Paperspace", "Lambda Labs"]
+    },
+    
+    "web_development": {
+      "must_include": ["GitHub Pages", "Vercel", "Netlify"],
+      "should_include": ["Heroku", "Railway", "Render"],
+      "nice_to_have": ["Cloudflare Pages", "AWS Amplify"]
+    }
+  },
+  
+  "career_alignment": {
+    "include_for_each_capability": [
+      "Common job titles",
+      "Typical salary ranges (US market, for reference)",
+      "Required vs. nice-to-have skills",
+      "Portfolio project suggestions",
+      "Interview preparation resources"
+    ],
+    
+    "job_market_data_sources": [
+      "Stack Overflow Developer Survey",
+      "GitHub Octoverse",
+      "TIOBE Index (for languages)",
+      "LinkedIn job postings",
+      "Industry reports (Gartner, etc.)"
+    ]
+  },
+  
+  "learning_resources": {
+    "types": [
+      "Interactive platforms (Codecademy, freeCodeCamp)",
+      "Video courses (Coursera, edX, YouTube)",
+      "Documentation (official docs)",
+      "Books (free/open source)",
+      "Practice platforms (LeetCode, HackerRank)",
+      "Project-based learning",
+      "Open source contribution"
+    ],
+    
+    "evaluation_criteria": [
+      "Free or student-accessible",
+      "Quality of content",
+      "Time investment required",
+      "Certification value",
+      "Community support",
+      "Currency (how up-to-date)"
+    ],
+    
+    "preference_order": [
+      "1. Free and high-quality",
+      "2. Student discount available",
+      "3. Freemium with substantial free tier",
+      "4. Free trial sufficient for learning"
+    ]
+  },
+  
+  "project_ideas": {
+    "requirements": [
+      "Practical and portfolio-worthy",
+      "Demonstrates capability effectively",
+      "Achievable within capability level",
+      "Uses free tools/platforms",
+      "Deployable/shareable"
+    ],
+    
+    "project_template": {
+      "title": "Descriptive project name",
+      "capability_level": "Beginner/Intermediate/Advanced",
+      "description": "What the project does",
+      "skills_demonstrated": ["Skill 1", "Skill 2"],
+      "tools_platforms": ["Tool 1", "Tool 2"],
+      "time_estimate": "Hours or days",
+      "resources": ["Tutorial link", "Documentation"],
+      "portfolio_value": "Why employers care"
+    }
+  },
+  
+  "economic_value_calculation": {
+    "components": [
+      "Free platform credits (actual dollar value)",
+      "Course/certification access (retail price)",
+      "Tool licenses (annual subscription cost)",
+      "Learning time saved (approximate)",
+      "Career impact (salary increase potential)"
+    ],
+    
+    "presentation": [
+      "Conservative estimates preferred",
+      "Break down by resource type",
+      "Note time period (monthly, annual, total during studies)",
+      "Include both direct savings and opportunity value",
+      "Compare to paid alternatives"
+    ]
+  },
+  
+  "ai_agent_guidance": {
+    "writing_style": {
+      "tone": "Informative, encouraging, practical",
+      "audience": "Students with basic tech knowledge",
+      "avoid": "Vendor marketing language, hype, over-promising"
+    },
+    
+    "before_writing": [
+      "Research current state of capability/field",
+      "Identify top 3-5 platforms for that capability",
+      "Verify student access/pricing for each platform",
+      "Review job postings to understand market demand",
+      "Check for recent major changes (new tools, deprecated features)"
+    ],
+    
+    "while_writing": [
+      "Focus on skills, not just tools",
+      "Provide practical examples and use cases",
+      "Compare options fairly",
+      "Include clear learning progression",
+      "Link to official documentation",
+      "Acknowledge complexity honestly"
+    ],
+    
+    "after_writing": [
+      "Verify all links work",
+      "Test any code examples",
+      "Confirm pricing/student access claims",
+      "Ensure learning path is realistic",
+      "Check for bias toward any platform"
+    ],
+    
+    "update_triggers": [
+      "Major platform changes (new free tiers, pricing changes)",
+      "New tools/platforms gaining traction",
+      "Shifting job market requirements",
+      "Student feedback about outdated content",
+      "Biannual scheduled review"
+    ]
+  },
+  
+  "cross_references": {
+    "internal": {
+      "01-TECH-PROFUNDO": "Link to detailed tool documentation",
+      "01-github-education": "Reference GitHub Student Pack tools",
+      "00-foundation-origins": "Check historical context for decisions",
+      "docs/protocols.md": "Follow repository conventions"
+    },
+    
+    "external": {
+      "official_docs": "Always link to authoritative sources",
+      "learning_platforms": "Direct links to free courses",
+      "community": "Stack Overflow, Reddit, Discord communities",
+      "career_resources": "Job boards, salary data, skill assessments"
+    }
+  },
+  
+  "quality_standards": {
+    "accuracy": "All claims verifiable from authoritative sources",
+    "currency": "Information updated within last 6 months",
+    "completeness": "All required sections present",
+    "clarity": "Written for intermediate technical audience",
+    "usefulness": "Actionable guidance, not just information",
+    "neutrality": "Fair representation of options",
+    "accessibility": "Clear learning paths for multiple backgrounds"
+  },
+  
+  "file_naming": {
+    "pattern": "lowercase-with-hyphens.md",
+    "examples": [
+      "overview_en.md",
+      "cloud-computing.md",
+      "data-science-ml.md",
+      "learning-paths/beginner-web-dev.md"
+    ]
+  }
+}

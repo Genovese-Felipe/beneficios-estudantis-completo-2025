@@ -1,0 +1,243 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "version": "1.0.0",
+  "generated_by": "GitHub Copilot (AI assistant)",
+  "generation_date": "2025-10-09",
+  "note": "Copilot is powered by AI; mistakes are possible. Review carefully.",
+  
+  "repository": {
+    "name": "beneficios-estudantis-completo-2025",
+    "owner": "Genovese-Felipe",
+    "purpose": "Comprehensive guide to student benefits for tech education in 2025",
+    "primary_language": "Portuguese",
+    "secondary_language": "English"
+  },
+  
+  "naming_conventions": {
+    "folders": {
+      "pattern": "##-CATEGORY-NAME",
+      "examples": [
+        "00-foundation-origins",
+        "01-github-education",
+        "02-technical-capabilities"
+      ],
+      "rules": [
+        "Use two-digit prefix for ordering (00, 01, 02, ...)",
+        "Use lowercase with hyphens for multi-word names",
+        "00 = Foundation/origins",
+        "01-09 = Primary content",
+        "10-89 = Secondary content",
+        "90-99 = Deprecated/archived"
+      ]
+    },
+    "files": {
+      "markdown": {
+        "pattern": "UPPER-CASE-KEBAB.md",
+        "examples": [
+          "README.md",
+          "GUIA-COMPLETO.md",
+          "TOP-50-PRIORIDADES.md"
+        ]
+      },
+      "documentation": {
+        "pattern": "lowercase-with-hyphens.md",
+        "examples": [
+          "overview.md",
+          "00-overview.md",
+          "protocols.md"
+        ]
+      },
+      "scripts": {
+        "pattern": "snake_case.py",
+        "examples": [
+          "audit_inventory.py",
+          "normalize_conversations.py"
+        ]
+      }
+    }
+  },
+  
+  "file_organization": {
+    "principles": [
+      "Group related content in numbered directories",
+      "Keep root directory clean with only essential files",
+      "Place supporting materials (scripts, docs) in dedicated folders",
+      "Use README.md files to explain directory contents",
+      "Maintain consistent depth (prefer 2-3 levels max)"
+    ],
+    "directory_purposes": {
+      "00-foundation-origins": "Historical records, conversations, project origins",
+      "00-VISAO-GERAL": "Current project documentation, policies, overview",
+      "01-TECH-PROFUNDO": "Primary technical content and guides",
+      "01-github-education": "GitHub Education specific content (proposed)",
+      "02-technical-capabilities": "Technical capabilities and skills (proposed)",
+      "docs": "Repository-level documentation and protocols",
+      "scripts": "Automation, audit, and maintenance scripts",
+      "artifacts": "Generated outputs (gitignored)"
+    }
+  },
+  
+  "documentation_requirements": {
+    "all_markdown_files": [
+      "Include English overview section",
+      "Add Portuguese (Português) section for main content",
+      "Provide 'How to use' section for maintainers",
+      "Include metadata (created date, purpose, status)",
+      "Add clear headers and table of contents for long files"
+    ],
+    "script_files": [
+      "Include docstring at file start",
+      "Add authorship note: 'Generated with assistance from GitHub Copilot'",
+      "Document all functions with docstrings",
+      "Provide usage examples in --help text",
+      "List all dependencies and installation instructions"
+    ],
+    "readme_files": [
+      "Explain directory purpose",
+      "List main files and their roles",
+      "Provide quick start guide",
+      "Link to related directories",
+      "Update date at bottom"
+    ]
+  },
+  
+  "coding_style": {
+    "python": {
+      "version": "3.7+",
+      "style_guide": "PEP 8",
+      "formatting": {
+        "line_length": 100,
+        "indentation": "4 spaces",
+        "quotes": "single for strings, double for docstrings"
+      },
+      "best_practices": [
+        "Use type hints for function parameters and returns",
+        "Include comprehensive docstrings",
+        "Handle errors gracefully with try-except",
+        "Use pathlib.Path for file operations",
+        "Prefer standard library over external dependencies where possible"
+      ]
+    },
+    "markdown": {
+      "headers": "ATX style (# Header)",
+      "lists": "Use - for unordered, 1. for ordered",
+      "code_blocks": "Use triple backticks with language identifier",
+      "links": "Use reference-style for repeated links"
+    }
+  },
+  
+  "git_workflow": {
+    "branches": {
+      "naming": "feature/description-YYYYMMDD or fix/description-YYYYMMDD",
+      "examples": [
+        "feature/reorg-audit-20251009",
+        "fix/broken-links-20251009"
+      ]
+    },
+    "commits": {
+      "style": "Conventional Commits",
+      "format": "type: description",
+      "types": ["feat", "fix", "docs", "refactor", "test", "chore"],
+      "examples": [
+        "feat: add semantic duplicate detection script",
+        "docs: update README with audit toolkit usage",
+        "refactor: restructure conversation normalization"
+      ]
+    },
+    "pull_requests": {
+      "title": "Clear, descriptive title in English",
+      "description": [
+        "Include both English and Portuguese sections",
+        "List all changes with checkboxes",
+        "Provide rationale for major changes",
+        "Add testing/validation steps",
+        "Link to related issues"
+      ]
+    }
+  },
+  
+  "ai_agent_guidelines": {
+    "first_actions": [
+      "Read this file (assistant_instructions.json) completely",
+      "Review 00-foundation-origins/00-overview.md for context",
+      "Check docs/protocols.md for current procedures",
+      "Scan recent commits to understand project velocity"
+    ],
+    "before_making_changes": [
+      "Understand the original intent by reviewing conversations/",
+      "Check if similar work was attempted before",
+      "Validate changes won't break existing structure",
+      "Consider impact on both human and AI maintainability"
+    ],
+    "code_quality": [
+      "Write production-ready code with error handling",
+      "Include comprehensive documentation",
+      "Add usage examples in help text",
+      "Test with sample data before committing",
+      "Consider edge cases and failure modes"
+    ],
+    "communication": [
+      "Be explicit about limitations and assumptions",
+      "Explain complex decisions in comments/docs",
+      "Acknowledge when uncertain",
+      "Provide alternatives when applicable"
+    ]
+  },
+  
+  "audit_toolkit": {
+    "scripts": {
+      "audit_inventory.py": {
+        "purpose": "Inventory all repository files with SHA-1 hashing",
+        "outputs": ["artifacts/repo_index.csv", "artifacts/duplicates.csv"],
+        "usage": "python scripts/audit_inventory.py [--output-dir DIR]"
+      },
+      "normalize_conversations.py": {
+        "purpose": "Parse and normalize conversation data to JSONL",
+        "outputs": ["artifacts/conversations.jsonl", "artifacts/conversations_metadata.json"],
+        "usage": "python scripts/normalize_conversations.py [--input-dir DIR]"
+      },
+      "deduplicate_semantic.py": {
+        "purpose": "Find semantically similar documents using embeddings",
+        "outputs": ["artifacts/semantic_duplicates.csv"],
+        "usage": "python scripts/deduplicate_semantic.py --input artifacts/repo_index.csv",
+        "dependencies": ["sentence-transformers", "numpy", "scipy"]
+      },
+      "apply_move_plan.py": {
+        "purpose": "Execute reorganization plan with safety checks",
+        "inputs": ["proposed_move_plan.csv"],
+        "usage": "python scripts/apply_move_plan.py --plan proposed_move_plan.csv --dry-run",
+        "safety_features": ["dry-run mode", "backup creation", "validation checks"]
+      }
+    },
+    "workflow": [
+      "1. Run audit_inventory.py to understand current state",
+      "2. Run normalize_conversations.py to extract historical context",
+      "3. Run deduplicate_semantic.py to find similar content",
+      "4. Create proposed_move_plan.csv with reorganization plan",
+      "5. Run apply_move_plan.py with --dry-run to validate",
+      "6. Review plan and adjust as needed",
+      "7. Run apply_move_plan.py with --apply and --backup"
+    ]
+  },
+  
+  "ignored_paths": {
+    "always_ignore": [
+      ".git/",
+      "__pycache__/",
+      "node_modules/",
+      "venv/",
+      ".venv/",
+      "artifacts/",
+      "outputs/",
+      "*.pyc",
+      "*.log"
+    ],
+    "reason": "Build artifacts, dependencies, and generated files should not be version controlled"
+  },
+  
+  "contact": {
+    "repository_owner": "Genovese-Felipe",
+    "issues": "https://github.com/Genovese-Felipe/beneficios-estudantis-completo-2025/issues",
+    "discussions": "https://github.com/Genovese-Felipe/beneficios-estudantis-completo-2025/discussions"
+  }
+}

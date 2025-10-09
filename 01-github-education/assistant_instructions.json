@@ -1,0 +1,257 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "version": "1.0.0",
+  "category": "01-github-education",
+  "generated_by": "GitHub Copilot (AI assistant)",
+  "generation_date": "2025-10-09",
+  "note": "Copilot is powered by AI; mistakes are possible. Review carefully.",
+  
+  "purpose": {
+    "description": "Instructions for AI agents working specifically on GitHub Education content",
+    "scope": "GitHub Education programs, benefits, and resources for students"
+  },
+  
+  "content_guidelines": {
+    "focus_areas": [
+      "GitHub Student Developer Pack benefits and application",
+      "GitHub Copilot for Students access and usage",
+      "GitHub Classroom for education",
+      "GitHub Campus Program details",
+      "GitHub certifications and learning paths",
+      "Integration with other GitHub features (Actions, Pages, etc.)"
+    ],
+    
+    "out_of_scope": [
+      "Non-GitHub cloud platforms (unless part of Student Developer Pack)",
+      "General programming tutorials (unless GitHub-specific)",
+      "Non-education GitHub features",
+      "Competitor platforms"
+    ],
+    
+    "accuracy_requirements": [
+      "Always verify information against official GitHub Education documentation",
+      "Check for program changes quarterly (GitHub updates offerings regularly)",
+      "Validate all URLs and application links",
+      "Confirm eligibility requirements are current",
+      "Note expiration dates for time-sensitive benefits"
+    ]
+  },
+  
+  "documentation_standards": {
+    "required_sections": [
+      "Overview/Purpose",
+      "Eligibility Requirements",
+      "How to Apply/Access",
+      "Benefits/Features",
+      "Value/Savings Estimation",
+      "Common Issues/Troubleshooting",
+      "Related Resources"
+    ],
+    
+    "language": {
+      "primary": "English (for GitHub Education official terminology)",
+      "secondary": "Portuguese (for accessibility)",
+      "format": "English first, then Portuguese section"
+    },
+    
+    "examples": {
+      "required": true,
+      "types": [
+        "Step-by-step application guides",
+        "Common use cases",
+        "Integration examples",
+        "Success stories"
+      ]
+    }
+  },
+  
+  "information_sources": {
+    "primary": [
+      "https://education.github.com/",
+      "https://docs.github.com/en/education",
+      "GitHub Education blog",
+      "Official GitHub Education announcements"
+    ],
+    
+    "verification_process": [
+      "Check official docs first",
+      "Verify with GitHub Education support if uncertain",
+      "Note source and verification date in documentation",
+      "Flag unverified claims clearly"
+    ]
+  },
+  
+  "update_schedule": {
+    "frequency": "Quarterly",
+    "months": ["January", "April", "July", "October"],
+    "triggers": [
+      "GitHub Education pack updates",
+      "New benefits announced",
+      "Policy changes",
+      "User-reported issues"
+    ],
+    
+    "update_checklist": [
+      "Verify all benefit listings are current",
+      "Test all application links",
+      "Update value/savings calculations",
+      "Check eligibility requirements",
+      "Update screenshots if UI changed",
+      "Review and update FAQs"
+    ]
+  },
+  
+  "economic_calculations": {
+    "methodology": [
+      "Use official retail/subscription prices",
+      "Consider student duration (typically 4 years undergraduate)",
+      "Include both direct savings and opportunity value",
+      "Note one-time vs. recurring benefits",
+      "Conservative estimates preferred"
+    ],
+    
+    "example_calculation": {
+      "github_copilot": {
+        "retail_price_monthly": 10,
+        "retail_price_annual": 100,
+        "student_years": 4,
+        "total_savings": 400,
+        "note": "Free for verified students"
+      },
+      "github_pro": {
+        "retail_price_monthly": 4,
+        "retail_price_annual": 48,
+        "student_years": 4,
+        "total_savings": 192,
+        "note": "Free for verified students"
+      }
+    }
+  },
+  
+  "common_issues": {
+    "verification_problems": {
+      "symptoms": [
+        "School email not recognized",
+        "Documents rejected",
+        "Long approval times"
+      ],
+      "solutions": [
+        "Use official school email domain",
+        "Ensure documents show current enrollment",
+        "Clear photos/scans of ID",
+        "Contact GitHub Education support",
+        "Check spam folder for approval emails"
+      ]
+    },
+    
+    "access_issues": {
+      "symptoms": [
+        "Benefits not appearing in account",
+        "Partner tool access denied",
+        "Expired benefits"
+      ],
+      "solutions": [
+        "Verify student status is current",
+        "Check partner tool specific requirements",
+        "Re-verify annually",
+        "Clear browser cache and retry",
+        "Contact specific vendor support"
+      ]
+    }
+  },
+  
+  "integration_points": {
+    "within_repository": {
+      "00-foundation-origins": "Reference historical decisions about GitHub Education coverage",
+      "01-TECH-PROFUNDO": "Link to detailed technical tools covered by Student Developer Pack",
+      "02-technical-capabilities": "Connect to broader technical skills and certifications",
+      "docs/protocols.md": "Follow repository-wide documentation standards"
+    },
+    
+    "external_resources": {
+      "github_docs": "Link to official documentation for technical details",
+      "partner_sites": "Link to partner tool documentation for setup guides",
+      "community": "Reference GitHub Education Community discussions"
+    }
+  },
+  
+  "ai_agent_specific_guidance": {
+    "before_editing": [
+      "Read overview_en.md for category context",
+      "Check GitHub Education official site for latest info",
+      "Review existing content structure",
+      "Understand relationship to parent repository theme"
+    ],
+    
+    "while_editing": [
+      "Maintain consistent tone (helpful, accurate, practical)",
+      "Verify all facts against official sources",
+      "Include practical examples and use cases",
+      "Consider student perspective and common questions",
+      "Use clear, accessible language"
+    ],
+    
+    "after_editing": [
+      "Verify all links work",
+      "Test any code examples",
+      "Ensure bilingual requirements met",
+      "Update last modified date",
+      "Check formatting and structure"
+    ],
+    
+    "quality_checks": [
+      "Accuracy: All information verifiable from official sources",
+      "Completeness: All required sections present",
+      "Clarity: Written for student audience (assumes basic tech knowledge)",
+      "Currency: Information is up-to-date",
+      "Consistency: Follows repository conventions"
+    ]
+  },
+  
+  "examples_to_include": {
+    "application_walkthrough": {
+      "format": "Step-by-step with screenshots",
+      "include": [
+        "Account creation/login",
+        "Student verification process",
+        "Benefit activation",
+        "Common pitfalls"
+      ]
+    },
+    
+    "use_cases": {
+      "github_copilot": [
+        "Writing Python scripts for data science",
+        "Building web applications",
+        "Learning new programming languages",
+        "Code review and debugging"
+      ],
+      "github_actions": [
+        "Automated testing for coursework",
+        "Deploying personal projects",
+        "Building CI/CD pipelines",
+        "Learning DevOps practices"
+      ]
+    },
+    
+    "success_stories": {
+      "format": "Brief case studies",
+      "elements": [
+        "Student background",
+        "Benefits used",
+        "Project/outcome",
+        "Lessons learned"
+      ]
+    }
+  },
+  
+  "file_naming": {
+    "pattern": "lowercase-with-hyphens.md",
+    "examples": [
+      "overview_en.md",
+      "student-developer-pack.md",
+      "github-copilot-guide.md",
+      "troubleshooting.md"
+    ]
+  }
+}

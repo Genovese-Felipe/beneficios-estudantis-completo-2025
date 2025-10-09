@@ -1,0 +1,173 @@
+name: Repository Audit
+
+# Generated with assistance from GitHub Copilot (AI assistant) on 2025-10-09
+# Note: Copilot is powered by AI; mistakes are possible. Review carefully.
+
+on:
+  pull_request:
+    branches:
+      - main
+      - develop
+  workflow_dispatch:
+  schedule:
+    # Run monthly on the 1st at 00:00 UTC
+    - cron: '0 0 1 * *'
+
+jobs:
+  audit:
+    name: Run Repository Audit
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: read
+      pull-requests: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Full history for accurate analysis
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          # No external dependencies needed for basic audit scripts
+          # If semantic deduplication is needed, uncomment:
+          # pip install sentence-transformers numpy scipy
+      
+      - name: Create output directory
+        run: mkdir -p artifacts
+      
+      - name: Run inventory audit
+        run: |
+          python scripts/audit_inventory.py --output-dir artifacts
+        continue-on-error: false
+      
+      - name: Run conversation normalization
+        run: |
+          python scripts/normalize_conversations.py --output-dir artifacts
+        continue-on-error: true  # May not have conversations in every PR
+      
+      - name: Generate audit summary
+        run: |
+          echo "# Repository Audit Summary" > artifacts/audit-summary.md
+          echo "" >> artifacts/audit-summary.md
+          echo "**Generated**: $(date -u +"%Y-%m-%d %H:%M:%S UTC")" >> artifacts/audit-summary.md
+          echo "**Triggered by**: ${{ github.event_name }}" >> artifacts/audit-summary.md
+          echo "" >> artifacts/audit-summary.md
+          
+          if [ -f artifacts/repo_index.csv ]; then
+            echo "## File Inventory" >> artifacts/audit-summary.md
+            FILE_COUNT=$(tail -n +2 artifacts/repo_index.csv | wc -l)
+            TOTAL_SIZE=$(tail -n +2 artifacts/repo_index.csv | cut -d',' -f2 | awk '{sum+=$1} END {print sum}')
+            TOTAL_SIZE_MB=$(echo "scale=2; $TOTAL_SIZE / 1024 / 1024" | bc)
+            echo "- Total files: $FILE_COUNT" >> artifacts/audit-summary.md
+            echo "- Total size: ${TOTAL_SIZE_MB} MB" >> artifacts/audit-summary.md
+            echo "" >> artifacts/audit-summary.md
+          fi
+          
+          if [ -f artifacts/duplicates.csv ]; then
+            echo "## Duplicate Files" >> artifacts/audit-summary.md
+            DUPLICATE_GROUPS=$(tail -n +2 artifacts/duplicates.csv | wc -l)
+            if [ "$DUPLICATE_GROUPS" -gt 0 ]; then
+              echo "⚠️ Found $DUPLICATE_GROUPS groups of duplicate files" >> artifacts/audit-summary.md
+              echo "" >> artifacts/audit-summary.md
+              echo "See \`duplicates.csv\` for details." >> artifacts/audit-summary.md
+            else
+              echo "✅ No duplicate files found" >> artifacts/audit-summary.md
+            fi
+            echo "" >> artifacts/audit-summary.md
+          fi
+          
+          if [ -f artifacts/conversations_metadata.json ]; then
+            echo "## Conversations" >> artifacts/audit-summary.md
+            CONV_COUNT=$(grep -o '"total_conversations": [0-9]*' artifacts/conversations_metadata.json | grep -o '[0-9]*')
+            MSG_COUNT=$(grep -o '"total_messages": [0-9]*' artifacts/conversations_metadata.json | grep -o '[0-9]*')
+            echo "- Conversations extracted: $CONV_COUNT" >> artifacts/audit-summary.md
+            echo "- Total messages: $MSG_COUNT" >> artifacts/audit-summary.md
+            echo "" >> artifacts/audit-summary.md
+          fi
+          
+          echo "## Files" >> artifacts/audit-summary.md
+          echo "Generated audit artifacts:" >> artifacts/audit-summary.md
+          echo '```' >> artifacts/audit-summary.md
+          ls -lh artifacts/ >> artifacts/audit-summary.md
+          echo '```' >> artifacts/audit-summary.md
+      
+      - name: Display summary
+        run: |
+          echo "==================== AUDIT SUMMARY ===================="
+          cat artifacts/audit-summary.md
+          echo "======================================================="
+      
+      - name: Upload audit artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: repository-audit-${{ github.run_number }}
+          path: artifacts/
+          retention-days: 90
+      
+      - name: Comment on PR (if applicable)
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const summary = fs.readFileSync('artifacts/audit-summary.md', 'utf8');
+            
+            // Get existing comments
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+            
+            // Find existing audit comment
+            const botComment = comments.find(comment => 
+              comment.user.type === 'Bot' && 
+              comment.body.includes('Repository Audit Summary')
+            );
+            
+            const body = summary + '\n\n---\n*Audit artifacts available in workflow run artifacts.*';
+            
+            if (botComment) {
+              // Update existing comment
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: botComment.id,
+                body: body
+              });
+            } else {
+              // Create new comment
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: body
+              });
+            }
+      
+      - name: Check for critical issues
+        run: |
+          # Check if there are too many duplicates
+          if [ -f artifacts/duplicates.csv ]; then
+            DUPLICATE_COUNT=$(tail -n +2 artifacts/duplicates.csv | wc -l)
+            if [ "$DUPLICATE_COUNT" -gt 10 ]; then
+              echo "::warning::Found $DUPLICATE_COUNT groups of duplicate files. Consider running deduplication."
+            fi
+          fi
+          
+          # Check repository size
+          if [ -f artifacts/repo_index.csv ]; then
+            TOTAL_SIZE=$(tail -n +2 artifacts/repo_index.csv | cut -d',' -f2 | awk '{sum+=$1} END {print sum}')
+            TOTAL_SIZE_MB=$(echo "scale=0; $TOTAL_SIZE / 1024 / 1024" | bc)
+            if [ "$TOTAL_SIZE_MB" -gt 100 ]; then
+              echo "::warning::Repository size is ${TOTAL_SIZE_MB} MB. Consider cleaning up large files."
+            fi
+          fi
