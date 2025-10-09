@@ -1,0 +1,23 @@
+name: Copy site to docs for GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  copy-site:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Copy site to docs folder
+        run: |
+          rm -rf docs
+          cp -r br-tech-pack.edu-site.001 docs
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          git add docs
+          git commit -m 'Atualiza site em /docs para o GitHub Pages' || echo "No changes to commit"
+          git push

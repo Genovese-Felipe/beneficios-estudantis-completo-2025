@@ -1,0 +1,211 @@
+area_id: "21-github-and-copilot-tech"
+area_name: "GitHub and Copilot Technical Documentation"
+version: "1.0.0"
+last_updated: "2025-01-09"
+
+description: >
+  Technical hub for GitHub, GitHub Copilot, and related technologies, including
+  implementation guides, technique catalogs, operations logs, and how-to documentation.
+
+intended_agents:
+  - type: "technical_writer"
+    capabilities: ["documentation", "code_examples", "tutorials"]
+  - type: "developer_assistant"
+    capabilities: ["code_generation", "debugging", "integration"]
+  - type: "operations_recorder"
+    capabilities: ["logging", "reporting", "analysis"]
+
+objectives:
+  primary:
+    - "Provide actionable technical documentation for GitHub ecosystem"
+    - "Catalog proven techniques and implementation patterns"
+    - "Maintain operational transparency through comprehensive logging"
+  secondary:
+    - "Enable skill development through practical guides"
+    - "Learn from operations through documented experiences"
+    - "Continuously improve content based on real-world feedback"
+
+inputs:
+  - type: "technical_documentation"
+    sources: ["docs.github.com", "github.com/features/copilot", "official_apis"]
+    description: "Official documentation for GitHub products and services"
+  
+  - type: "community_knowledge"
+    sources: ["stack_overflow", "github_discussions", "blog_posts"]
+    description: "Community-contributed solutions and patterns"
+  
+  - type: "operational_experience"
+    sources: ["internal_operations", "experiments", "implementations"]
+    description: "Real-world learnings from using GitHub technologies"
+
+outputs:
+  - type: "technique_catalog"
+    location: "01-techniques/"
+    description: "Documented patterns and approaches"
+    template: "01-techniques/techniques-catalog-template.md"
+  
+  - type: "operations_logs"
+    location: "02-operations-logs/"
+    description: "Chronological record of operations and learnings"
+    template: "02-operations-logs/reorg-report-template.md"
+  
+  - type: "how_to_guides"
+    location: "03-how-to/"
+    description: "Step-by-step procedural documentation"
+    format: "markdown with code blocks"
+  
+  - type: "reference_documentation"
+    location: "./ (root level)"
+    files:
+      - "MCPS-APIS.md"
+      - "CERTIFICATIONS-TECH.md"
+      - "DATA-ML-TOOLS.md"
+      - "AI-LLMS.md"
+      - "CLOUD-COMPUTE.md"
+      - "DEV-TOOLS.md"
+      - "CURSOS-TECH.md"
+    description: "Comprehensive technical reference materials"
+
+policies:
+  content_quality:
+    - "All code examples must be tested and working"
+    - "Include error handling and edge cases"
+    - "Provide context for when to use (and not use) techniques"
+    - "Keep content up-to-date with latest API versions"
+  
+  documentation_standards:
+    - "Use markdown for all textual content"
+    - "Follow consistent naming conventions (kebab-case)"
+    - "Include metadata headers (date, author, version)"
+    - "Cross-reference related content with relative links"
+  
+  operations_logging:
+    - "Log all significant operations within 24 hours"
+    - "Include objective, method, results, and lessons learned"
+    - "Use ISO 8601 timestamps for all entries"
+    - "Quantify outcomes where possible"
+    - "Note unexpected behaviors or issues"
+
+quality_checks:
+  before_publication:
+    - "Test all code examples in relevant environments"
+    - "Verify all links and references"
+    - "Review for technical accuracy"
+    - "Check spelling and grammar"
+    - "Ensure template compliance"
+  
+  technique_validation:
+    - "Verify prerequisites are complete"
+    - "Confirm implementation steps are reproducible"
+    - "Test examples with different inputs"
+    - "Document known limitations"
+    - "Include troubleshooting guidance"
+  
+  operations_log_completeness:
+    - "Timestamp present and correctly formatted"
+    - "Objective clearly stated"
+    - "Method described in sufficient detail"
+    - "Results quantified or qualified"
+    - "Lessons learned captured"
+    - "Next steps or recommendations provided"
+
+operations:
+  documenting_technique:
+    steps:
+      - "Identify technique name and primary use case"
+      - "Create file in 01-techniques/ using template"
+      - "Document context, prerequisites, and implementation"
+      - "Provide working code examples"
+      - "Test all examples thoroughly"
+      - "Document trade-offs and alternatives"
+      - "Add to techniques index if one exists"
+  
+  logging_operation:
+    steps:
+      - "Create new file in 02-operations-logs/ with date prefix"
+      - "Use reorg-report-template.md or similar as base"
+      - "Fill in all required sections"
+      - "Quantify results where possible"
+      - "Include lessons learned"
+      - "Cross-reference related operations"
+  
+  creating_how_to_guide:
+    steps:
+      - "Choose clear, action-oriented title"
+      - "List all prerequisites explicitly"
+      - "Write numbered step-by-step instructions"
+      - "Include code blocks with syntax highlighting"
+      - "Add screenshots for UI-heavy procedures"
+      - "Describe expected outcomes"
+      - "Add troubleshooting section"
+      - "Test guide from start to finish"
+
+cross_references:
+  related_areas:
+    - area: "20-github-education-analyses"
+      relationship: "Strategic analysis informs tactical implementation"
+      guidance: "Reference analyses when choosing implementation approaches"
+    
+    - area: "10-product-guide"
+      relationship: "Product guide lists benefits; this area shows how to use them"
+      guidance: "Link to product guide for benefit discovery"
+    
+    - area: "40-scripts"
+      relationship: "Scripts implement automation; this area documents them"
+      guidance: "Document script usage in 03-how-to/"
+    
+    - area: "00-governance-and-origins"
+      relationship: "Governance defines protocols; this area follows them"
+      guidance: "Use templates from 04-templates/ for consistency"
+
+content_organization:
+  by_technology:
+    - "GitHub API and integrations"
+    - "GitHub Copilot and AI coding assistants"
+    - "Model Context Protocol (MCP) servers"
+    - "GitHub Actions and CI/CD"
+    - "Data science and ML tools"
+    - "Cloud platforms and compute"
+    - "Development tools and IDEs"
+  
+  by_complexity:
+    - "Beginner: Getting started and basic usage"
+    - "Intermediate: Integration and optimization"
+    - "Advanced: Custom implementations and extensions"
+
+metrics_to_track:
+  - "Number of techniques documented"
+  - "Operations logged per month"
+  - "How-to guide completion rate"
+  - "Code example test success rate"
+  - "Content freshness (days since update)"
+  - "Community contribution rate"
+
+notes:
+  - "Focus on practical, actionable content over theoretical discussion"
+  - "Operations logs are learning tools - document failures as well as successes"
+  - "Maintain a balance between comprehensiveness and maintainability"
+  - "Code examples should follow GitHub and language best practices"
+  - "Keep security in mind - no hardcoded secrets or credentials"
+  - "Consider multiple skill levels when writing documentation"
+
+best_practices:
+  code_examples:
+    - "Use realistic but simplified scenarios"
+    - "Include comments explaining non-obvious code"
+    - "Show error handling where appropriate"
+    - "Provide complete, runnable examples"
+    - "Use consistent formatting and style"
+  
+  troubleshooting:
+    - "Address common pitfalls proactively"
+    - "Provide diagnostic steps"
+    - "Link to relevant error documentation"
+    - "Suggest workarounds when issues are known"
+
+metadata:
+  primary_audience: "developers"
+  secondary_audience: ["operations_teams", "technical_writers", "students"]
+  content_type: "technical"
+  update_frequency: "continuous"
+  requires_testing: true
