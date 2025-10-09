@@ -1,0 +1,301 @@
+area_id: "40-scripts"
+area_name: "Scripts and Automation"
+version: "1.0.0"
+last_updated: "2025-01-09"
+
+description: >
+  Collection of automation scripts, utilities, and tools that support repository
+  operations, data processing, validation, and maintenance tasks.
+
+intended_agents:
+  - type: "automation_engineer"
+    capabilities: ["script_development", "testing", "deployment"]
+  - type: "operations_assistant"
+    capabilities: ["script_execution", "monitoring", "logging"]
+  - type: "validation_agent"
+    capabilities: ["quality_checking", "compliance_verification"]
+
+objectives:
+  primary:
+    - "Automate repetitive and complex operations"
+    - "Ensure consistent execution of standardized procedures"
+    - "Validate data quality and structural compliance"
+  secondary:
+    - "Reduce manual errors through automation"
+    - "Provide transparency through comprehensive logging"
+    - "Enable safe operations through dry-run capabilities"
+
+inputs:
+  - type: "configuration_files"
+    location: "../ (repository root)"
+    formats: ["yaml", "json", "ini"]
+    description: "Configuration files that define script behavior"
+  
+  - type: "source_data"
+    sources: ["repository_files", "30-data/datasets/", "external_apis"]
+    description: "Data to be processed or validated"
+  
+  - type: "command_line_arguments"
+    description: "Runtime parameters and options"
+
+outputs:
+  - type: "modified_files"
+    description: "Files created, updated, or moved by scripts"
+    locations: "various"
+  
+  - type: "operation_logs"
+    location: "../21-github-and-copilot-tech/02-operations-logs/"
+    description: "Detailed logs of script executions"
+  
+  - type: "validation_reports"
+    location: "varies by script"
+    formats: ["text", "json", "markdown"]
+    description: "Reports on quality checks and compliance"
+  
+  - type: "duplicate_indices"
+    location: "../90-archive/duplicates/"
+    description: "Records of identified duplicate files"
+
+policies:
+  safety_first:
+    - "Dry-run mode by default for destructive operations"
+    - "Require explicit confirmation for risky operations"
+    - "Create backups before modifications"
+    - "Validate inputs before processing"
+    - "Provide rollback capability where feasible"
+  
+  code_quality:
+    - "Follow PEP 8 for Python scripts"
+    - "Include comprehensive docstrings"
+    - "Add type hints for better maintainability"
+    - "Handle errors gracefully with clear messages"
+    - "Return appropriate exit codes"
+  
+  documentation:
+    - "Provide --help documentation"
+    - "Include usage examples in README"
+    - "Document all configuration options"
+    - "Maintain changelog for script updates"
+    - "Create how-to guides for complex scripts"
+  
+  logging_and_transparency:
+    - "Log all significant operations"
+    - "Use structured logging (JSON or similar)"
+    - "Include timestamps in ISO 8601 format"
+    - "Store logs in 21-github-and-copilot-tech/02-operations-logs/"
+    - "Make logs easily searchable"
+
+quality_checks:
+  before_execution:
+    - "Verify script dependencies are installed"
+    - "Validate configuration files"
+    - "Check file permissions"
+    - "Ensure dry-run mode for first execution"
+  
+  during_development:
+    - "Write unit tests for critical functionality"
+    - "Test with edge cases and error conditions"
+    - "Verify behavior in dry-run mode"
+    - "Check for security vulnerabilities"
+    - "Review code with peer"
+  
+  after_execution:
+    - "Verify expected outputs were created"
+    - "Check logs for errors or warnings"
+    - "Validate no unintended side effects"
+    - "Confirm operation completed successfully"
+
+operations:
+  executing_script:
+    steps:
+      - "Read script documentation (--help or README)"
+      - "Verify dependencies and permissions"
+      - "Run in dry-run mode first (if available)"
+      - "Review dry-run output and logs"
+      - "Execute with actual changes if dry-run acceptable"
+      - "Verify results and check logs"
+      - "Document execution in operations logs"
+  
+  developing_new_script:
+    steps:
+      - "Define clear purpose and scope"
+      - "Design command-line interface"
+      - "Implement with error handling"
+      - "Add comprehensive docstrings"
+      - "Include dry-run capability for destructive ops"
+      - "Write tests for critical paths"
+      - "Document in README and 03-how-to/ if complex"
+      - "Peer review before merging"
+  
+  troubleshooting_script:
+    steps:
+      - "Run with --verbose flag for detailed output"
+      - "Review logs in 02-operations-logs/"
+      - "Check configuration files for errors"
+      - "Verify dependencies and versions"
+      - "Test with minimal input data"
+      - "Document issue and resolution"
+
+script_catalog:
+  reorg.py:
+    purpose: "Repository reorganization and deduplication"
+    usage: "python reorg.py [--dry-run|--apply] [--spec SPEC_FILE]"
+    config: "../reorg-spec.yaml"
+    requires: ["PyYAML"]
+    destructive: true
+    dry_run_available: true
+
+command_line_standards:
+  required_arguments:
+    help:
+      flag: "--help, -h"
+      description: "Show help message and exit"
+    
+  common_optional_arguments:
+    verbose:
+      flag: "--verbose, -v"
+      description: "Increase output verbosity"
+    
+    quiet:
+      flag: "--quiet, -q"
+      description: "Suppress non-error output"
+    
+    dry_run:
+      flag: "--dry-run"
+      description: "Preview changes without applying"
+    
+    config:
+      flag: "--config, -c"
+      description: "Path to configuration file"
+
+error_handling:
+  exit_codes:
+    0: "Success"
+    1: "General error"
+    2: "Invalid arguments"
+    3: "Configuration error"
+    4: "File operation error"
+    5: "Validation error"
+  
+  error_messages:
+    requirements:
+      - "Clear description of what went wrong"
+      - "Suggestion for how to fix"
+      - "Reference to relevant documentation"
+      - "Context about where error occurred"
+
+logging_standards:
+  format:
+    timestamp: "ISO 8601 (YYYY-MM-DDTHH:MM:SS.sssZ)"
+    level: ["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"]
+    message: "Clear, actionable description"
+    context: "Relevant details (file paths, counts, etc.)"
+  
+  best_practices:
+    - "Log start and end of script execution"
+    - "Log each significant operation"
+    - "Include summary statistics at end"
+    - "Use appropriate log levels"
+    - "Avoid logging sensitive information"
+
+security_guidelines:
+  secrets_management:
+    - "Never hardcode credentials in scripts"
+    - "Use environment variables for secrets"
+    - "Support .env files for local development"
+    - "Document required environment variables"
+  
+  input_validation:
+    - "Sanitize all user inputs"
+    - "Validate file paths to prevent traversal"
+    - "Check file types before processing"
+    - "Limit resource usage (memory, disk, time)"
+  
+  permissions:
+    - "Run with minimal required permissions"
+    - "Check permissions before operations"
+    - "Warn about permission issues clearly"
+
+testing_guidelines:
+  unit_tests:
+    - "Test critical business logic"
+    - "Test error handling paths"
+    - "Mock external dependencies"
+    - "Use pytest or unittest"
+  
+  integration_tests:
+    - "Test with real configuration files"
+    - "Verify end-to-end workflows"
+    - "Test with various data types"
+    - "Validate output formats"
+  
+  manual_tests:
+    - "Test dry-run mode"
+    - "Test with minimal data"
+    - "Test error conditions"
+    - "Verify logs are created"
+
+cross_references:
+  related_areas:
+    - area: "21-github-and-copilot-tech"
+      relationship: "Operations logs and how-to guides"
+      guidance: "Document executions in 02-operations-logs/, create guides in 03-how-to/"
+    
+    - area: "00-governance-and-origins"
+      relationship: "Scripts implement governance protocols"
+      guidance: "Follow protocols from 03-protocols/, use templates from 04-templates/"
+    
+    - area: "30-data"
+      relationship: "Scripts process and validate data"
+      guidance: "Follow data standards when generating datasets"
+    
+    - area: "90-archive"
+      relationship: "Scripts move files to archive"
+      guidance: "Use archive for duplicates and legacy content"
+
+metrics_to_track:
+  - "Number of scripts in repository"
+  - "Script execution frequency"
+  - "Success vs failure rate"
+  - "Average execution time"
+  - "Test coverage percentage"
+  - "Issues reported and resolved"
+
+future_enhancements:
+  - "Continuous integration for script testing"
+  - "Performance monitoring and optimization"
+  - "Web UI for common operations"
+  - "Script dependency management"
+  - "Automated rollback on failures"
+  - "Notification system for long-running scripts"
+
+best_practices:
+  idempotency:
+    - "Scripts should be safe to run multiple times"
+    - "Check state before making changes"
+    - "Skip already-completed operations"
+  
+  modularity:
+    - "Break complex scripts into functions"
+    - "Create reusable utilities"
+    - "Separate config from logic"
+  
+  maintainability:
+    - "Use meaningful variable names"
+    - "Keep functions focused and small"
+    - "Comment complex logic"
+    - "Version scripts if they evolve significantly"
+
+notes:
+  - "Always test in dry-run mode first"
+  - "Scripts should be self-documenting through --help"
+  - "Log everything for debugging and audit"
+  - "Consider the impact on CI/CD when adding scripts"
+  - "Keep scripts focused - one primary purpose per script"
+
+metadata:
+  primary_audience: "operations_teams"
+  secondary_audience: ["developers", "automation_engineers"]
+  content_type: "executable"
+  requires_testing: true
+  update_frequency: "as_needed"

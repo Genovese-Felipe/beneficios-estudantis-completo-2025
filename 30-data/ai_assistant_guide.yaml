@@ -1,0 +1,254 @@
+area_id: "30-data"
+area_name: "Data and Datasets"
+version: "1.0.0"
+last_updated: "2025-01-09"
+
+description: >
+  Central repository for structured data, datasets, data dictionaries, and schemas
+  that support analyses, documentation, and decision-making across the project.
+
+intended_agents:
+  - type: "data_analyst"
+    capabilities: ["data_processing", "validation", "cleaning"]
+  - type: "data_curator"
+    capabilities: ["cataloging", "documentation", "quality_assurance"]
+  - type: "research_assistant"
+    capabilities: ["data_gathering", "citation", "verification"]
+
+objectives:
+  primary:
+    - "Maintain centralized, well-documented datasets"
+    - "Ensure data quality, accuracy, and currency"
+    - "Enable reproducible analyses and verification"
+  secondary:
+    - "Support evidence-based decision making"
+    - "Track data provenance and transformations"
+    - "Facilitate data discovery and reuse"
+
+inputs:
+  - type: "source_data"
+    sources: ["official_websites", "public_apis", "published_reports"]
+    description: "Raw data from authoritative public sources"
+  
+  - type: "derived_data"
+    sources: ["internal_analyses", "calculations", "aggregations"]
+    description: "Processed data generated from source data"
+  
+  - type: "community_data"
+    sources: ["surveys", "community_reports", "user_contributions"]
+    description: "Data collected from community sources"
+
+outputs:
+  - type: "structured_datasets"
+    location: "datasets/"
+    formats: ["csv", "json"]
+    description: "Clean, validated datasets ready for analysis"
+  
+  - type: "data_dictionaries"
+    location: "dictionaries/"
+    format: "markdown"
+    description: "Field definitions, schemas, and metadata"
+  
+  - type: "data_documentation"
+    files: ["README.md", "dataset-specific-READMEs"]
+    description: "Context, methodology, and usage guidance"
+
+policies:
+  data_quality:
+    - "Verify all data against authoritative sources"
+    - "Document any transformations or calculations"
+    - "Use consistent formats and conventions"
+    - "Validate data before committing"
+  
+  documentation_requirements:
+    - "Every dataset must have a data dictionary"
+    - "Include source attribution and links"
+    - "Document update frequency and date"
+    - "Note limitations and caveats"
+  
+  privacy_and_security:
+    - "Only public data - no personal information"
+    - "No API keys, credentials, or secrets"
+    - "Respect source licenses and terms of use"
+    - "Obtain permission for proprietary data"
+  
+  versioning:
+    - "Include date in filename for time-series data"
+    - "Archive old versions rather than overwriting"
+    - "Document breaking changes in schema"
+    - "Maintain backwards compatibility when possible"
+
+quality_checks:
+  before_commit:
+    - "Run validation scripts on structured data"
+    - "Check for data dictionary completeness"
+    - "Verify all required fields present"
+    - "Ensure consistent encoding (UTF-8)"
+    - "Test that files can be loaded/parsed"
+  
+  data_validation:
+    - "Check for missing or null values"
+    - "Verify data types match schema"
+    - "Validate value ranges and constraints"
+    - "Test referential integrity"
+    - "Check for duplicates if inappropriate"
+  
+  documentation_validation:
+    - "Data dictionary covers all fields"
+    - "Sources are cited with links"
+    - "Update date is current"
+    - "Usage examples provided where helpful"
+
+operations:
+  adding_new_dataset:
+    steps:
+      - "Verify data is publicly available and licensed"
+      - "Clean and validate data"
+      - "Choose appropriate format (CSV/JSON)"
+      - "Create data dictionary with all fields"
+      - "Document source, methodology, and context"
+      - "Follow naming conventions"
+      - "Run validation checks"
+      - "Add entry to main README"
+  
+  updating_existing_dataset:
+    steps:
+      - "Review current version and schema"
+      - "Collect updated source data"
+      - "Apply same transformations as original"
+      - "Validate updated data"
+      - "Update data dictionary if schema changed"
+      - "Increment version or date in filename"
+      - "Document changes in changelog"
+  
+  creating_data_dictionary:
+    required_fields:
+      - "Field name"
+      - "Data type"
+      - "Description"
+      - "Example values"
+      - "Constraints or validation rules"
+      - "Source or derivation"
+    optional_fields:
+      - "Units"
+      - "Default value"
+      - "Related fields"
+      - "Notes"
+
+file_formats:
+  csv:
+    encoding: "UTF-8"
+    delimiter: ","
+    quote_char: "\""
+    header_row: true
+    na_representation: ["", "NA", "null"]
+  
+  json:
+    encoding: "UTF-8"
+    indent: 2
+    ensure_ascii: false
+    sort_keys: false
+    schema: "Include JSON Schema when complex"
+
+naming_conventions:
+  datasets:
+    pattern: "[topic]-[type]-[YYYY-MM-DD].[ext]"
+    examples:
+      - "benefits-catalog-2025-01-09.csv"
+      - "economic-impact-2025-01-09.json"
+      - "program-comparison-matrix-2025-01.csv"
+  
+  dictionaries:
+    pattern: "[dataset-basename]-dictionary.md"
+    examples:
+      - "benefits-catalog-dictionary.md"
+      - "economic-impact-dictionary.md"
+
+cross_references:
+  related_areas:
+    - area: "10-product-guide"
+      relationship: "Product documentation references and uses data"
+      guidance: "Cite specific datasets when making quantitative claims"
+    
+    - area: "20-github-education-analyses"
+      relationship: "Analyses use datasets for evidence-based findings"
+      guidance: "Store analysis datasets here with proper documentation"
+    
+    - area: "21-github-and-copilot-tech"
+      relationship: "Technical docs describe data tools and platforms"
+      guidance: "Reference tool datasets when documenting capabilities"
+    
+    - area: "40-scripts"
+      relationship: "Scripts may generate, process, or validate data"
+      guidance: "Document data provenance when scripts create datasets"
+
+common_pitfalls:
+  - "Forgetting to create data dictionary"
+  - "Inconsistent field naming across datasets"
+  - "Missing source attribution"
+  - "No update date or version"
+  - "Unclear units or scales"
+  - "Undocumented transformations"
+  - "Stale data without currency warnings"
+
+best_practices:
+  field_naming:
+    - "Use snake_case for field names"
+    - "Be descriptive but concise"
+    - "Avoid abbreviations unless standard"
+    - "Use consistent terminology across datasets"
+  
+  data_types:
+    - "Use appropriate types (numeric, string, date)"
+    - "Store dates in ISO 8601 format (YYYY-MM-DD)"
+    - "Use decimal numbers for currency, not floats"
+    - "Normalize text (e.g., lowercase for categories)"
+  
+  null_handling:
+    - "Document meaning of null/missing values"
+    - "Distinguish between 'unknown' and 'not applicable'"
+    - "Use consistent NA representation"
+
+validation_rules:
+  tabular_data:
+    - "Header row must be present"
+    - "No empty columns"
+    - "Consistent field count per row"
+    - "Valid UTF-8 encoding"
+    - "No trailing whitespace in fields"
+  
+  hierarchical_data:
+    - "Valid JSON syntax"
+    - "Follows declared schema if provided"
+    - "Consistent structure across records"
+    - "Reasonable file size"
+
+metrics_to_track:
+  - "Number of datasets maintained"
+  - "Data freshness (days since update)"
+  - "Dictionary completeness percentage"
+  - "Validation pass rate"
+  - "Data usage frequency"
+  - "Community contributions"
+
+future_enhancements:
+  - "Implement automated data validation pipeline"
+  - "Add version control system (DVC or similar)"
+  - "Create data catalog/portal"
+  - "Develop data quality metrics dashboard"
+  - "API endpoints for programmatic access"
+  - "Automated currency checking and alerts"
+
+notes:
+  - "Prioritize data quality over quantity"
+  - "Good documentation is as important as the data itself"
+  - "When in doubt, over-document rather than under-document"
+  - "Consider downstream users when structuring data"
+  - "Regular audits help maintain data quality"
+
+metadata:
+  primary_audience: "analysts"
+  secondary_audience: ["researchers", "developers", "content_creators"]
+  content_type: "data"
+  update_frequency: "varies_by_dataset"
+  requires_validation: true
