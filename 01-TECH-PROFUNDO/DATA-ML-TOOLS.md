@@ -297,7 +297,7 @@ dvc push
 ### Comparison MLOps
 
 | Plataforma | Custo Estudante | Experiment Tracking | Dataset Versioning | Model Registry | Best For |
-|------------|-----------------|---------------------|--------------------|-|----------|
+|------------|-----------------|---------------------|--------------------|----------------|----------|
 | W&B | Grátis | ✅ Excelente | ✅ Sim | ✅ Sim | Time collaboration |
 | Neptune | Grátis | ✅ Excelente | ✅ Sim | ✅ Sim | Individual/Small teams |
 | MLflow | Grátis | ✅ Bom | ❌ Limitado | ✅ Sim | Self-hosted |
