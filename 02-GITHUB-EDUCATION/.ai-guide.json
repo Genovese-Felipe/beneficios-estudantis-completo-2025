@@ -1,0 +1,210 @@
+{
+  "folder": "02-GITHUB-EDUCATION",
+  "version": "1.0.0",
+  "last_updated": "2025-01-08",
+  "purpose": "GitHub Education Pack deep documentation",
+  "target_audience": ["students", "developers", "educators", "ai_agents"],
+  
+  "economic_value": {
+    "currency_primary": "BRL",
+    "currency_secondary": "USD",
+    "annual_savings": {
+      "min_usd": 15000,
+      "max_usd": 25000,
+      "min_brl": 75000,
+      "max_brl": 125000
+    }
+  },
+
+  "key_benefits": {
+    "github_copilot": {
+      "value_usd": 100,
+      "value_brl": 500,
+      "description": "AI-powered coding assistant",
+      "access": "free_for_verified_students",
+      "includes": ["code_completion", "chat", "cli", "mobile"]
+    },
+    "development_tools": {
+      "jetbrains": {
+        "value_usd": 649,
+        "value_brl": 3245,
+        "products": "all"
+      },
+      "gitkraken": {
+        "value_usd": 59,
+        "value_brl": 295
+      }
+    },
+    "cloud_credits": {
+      "azure": 100,
+      "digitalocean": 200,
+      "heroku": 156
+    },
+    "learning_platforms": {
+      "datacamp": 300,
+      "educative": 300,
+      "frontend_masters": 390
+    }
+  },
+
+  "structure": {
+    "documentation": [
+      "OVERVIEW.md",
+      "README.md",
+      "GITHUB-EDUCATION-COMPLETE.md",
+      "COPILOT-FOR-STUDENTS.md",
+      "PARTNER-TOOLS.md",
+      "APPLICATION-GUIDE.md",
+      "VERIFICATION-TIPS.md"
+    ],
+    "focus_areas": [
+      "github_copilot",
+      "partner_tools",
+      "verification_process",
+      "application_tips",
+      "renewal_procedures"
+    ]
+  },
+
+  "ai_agent_instructions": {
+    "reading_priority": [
+      "02-GITHUB-EDUCATION/OVERVIEW.md",
+      "02-GITHUB-EDUCATION/.ai-guide.json",
+      "02-GITHUB-EDUCATION/GITHUB-EDUCATION-COMPLETE.md"
+    ],
+    "when_to_consult": [
+      "GitHub Education Pack questions",
+      "Student verification issues",
+      "GitHub Copilot free access",
+      "Partner tool details",
+      "Application process guidance"
+    ],
+    "update_frequency": "quarterly",
+    "verification_required": [
+      "partner_tools_list",
+      "pricing_values",
+      "credit_amounts",
+      "eligibility_requirements"
+    ]
+  },
+
+  "content_guidelines": {
+    "documentation_style": "comprehensive_and_practical",
+    "include": [
+      "step_by_step_instructions",
+      "screenshots_when_helpful",
+      "troubleshooting_sections",
+      "real_world_examples",
+      "economic_calculations"
+    ],
+    "update_triggers": [
+      "new_partner_added",
+      "partner_removed",
+      "pricing_changes",
+      "github_policy_updates",
+      "verification_process_changes"
+    ]
+  },
+
+  "key_topics": {
+    "copilot": {
+      "features": [
+        "code_completion",
+        "copilot_chat",
+        "copilot_cli",
+        "workspace_context",
+        "multiple_model_support"
+      ],
+      "free_for": "verified_students",
+      "tier": "copilot_pro",
+      "languages": "50+",
+      "ides": ["vscode", "jetbrains", "neovim", "visual_studio"]
+    },
+    "partner_ecosystem": {
+      "categories": [
+        "development_tools",
+        "cloud_infrastructure",
+        "learning_platforms",
+        "design_tools",
+        "productivity_apps",
+        "domain_hosting",
+        "security_tools"
+      ],
+      "total_partners": "80+",
+      "update_frequency": "monthly"
+    },
+    "verification": {
+      "methods": [
+        "institutional_email",
+        "id_card_upload",
+        "enrollment_proof",
+        "github_campus_program"
+      ],
+      "processing_time": "1-7_days",
+      "renewal_required": "annually"
+    }
+  },
+
+  "related_folders": [
+    {
+      "path": "00-FUNDAMENTOS",
+      "relationship": "Original research and conversations about GitHub Education",
+      "flow": "00-FUNDAMENTOS → 02-GITHUB-EDUCATION"
+    },
+    {
+      "path": "01-VISAO-GERAL",
+      "relationship": "High-level overview includes GitHub Education summary",
+      "flow": "02-GITHUB-EDUCATION → 01-VISAO-GERAL"
+    },
+    {
+      "path": "03-GITHUB-SKILLS",
+      "relationship": "Technical skills using GitHub and Copilot",
+      "flow": "02-GITHUB-EDUCATION (tools) ← 03-GITHUB-SKILLS (techniques)"
+    },
+    {
+      "path": "04-TECH-PROFUNDO",
+      "relationship": "Detailed technical documentation of partner tools",
+      "flow": "02-GITHUB-EDUCATION (tools list) → 04-TECH-PROFUNDO (detailed guides)"
+    }
+  ],
+
+  "brazilian_specifics": {
+    "email_domains": [
+      ".edu.br",
+      ".br academic institutions",
+      "university domains"
+    ],
+    "common_issues": [
+      "email_verification_delays",
+      "document_upload_format",
+      "institutional_recognition"
+    ],
+    "popular_institutions": [
+      "USP", "UNICAMP", "UFRJ", "UFMG", "UnB",
+      "ITA", "IME", "UFSC", "UFRGS"
+    ],
+    "language_support": "portuguese_documentation_needed"
+  },
+
+  "external_links": {
+    "official": {
+      "main": "https://education.github.com/",
+      "pack": "https://education.github.com/pack",
+      "benefits": "https://education.github.com/benefits",
+      "copilot": "https://github.com/features/copilot"
+    },
+    "application": {
+      "apply": "https://education.github.com/discount_requests/application",
+      "verify": "https://education.github.com/discount_requests/student_application"
+    }
+  },
+
+  "metadata": {
+    "folder_created": "2025-01-08",
+    "creation_reason": "GitHub Education Pack deserves dedicated deep documentation",
+    "separated_from": "01-VISAO-GERAL",
+    "estimated_completion": "2025-01-15",
+    "priority": "high",
+    "impact": "high_value_for_students"
+  }
+}

@@ -1,0 +1,238 @@
+{
+  "folder": "01-VISAO-GERAL",
+  "version": "1.0.0",
+  "last_updated": "2025-01-08",
+  "purpose": "High-level overviews and executive summaries",
+  "target_audience": ["all_users", "first_time_visitors", "ai_agents"],
+  
+  "role": "entry_point_and_navigation_hub",
+  
+  "economic_summary": {
+    "total_annual_savings": {
+      "min_brl": 137000,
+      "max_brl": 264000,
+      "min_usd": 27000,
+      "max_usd": 53000
+    },
+    "breakdown": {
+      "cloud_computing": {"min": 20000, "max": 30000},
+      "mcps_apis": {"min": 33000, "max": 73000},
+      "certifications": {"min": 20000, "max": 30000},
+      "data_ml_tools": {"min": 15000, "max": 25000},
+      "github_education": {"min": 75000, "max": 125000}
+    }
+  },
+
+  "core_documents": {
+    "PROCESSO-EXECUTIVO.md": {
+      "purpose": "reorganization_process_documentation",
+      "size": "large",
+      "importance": "high",
+      "audience": ["developers", "ai_agents", "project_managers"],
+      "content": [
+        "conversation_analysis_11507_lines",
+        "objective_identification",
+        "problems_found_and_fixed",
+        "62KB_content_created",
+        "metrics_and_recommendations"
+      ]
+    },
+    "ECONOMIA-CALCULADA.md": {
+      "purpose": "economic_value_breakdown",
+      "importance": "high",
+      "audience": ["students", "decision_makers"],
+      "content": [
+        "tool_valuations",
+        "aggregated_calculations",
+        "qualification_requirements",
+        "application_processes"
+      ]
+    },
+    "GUIA-COMPLETO.md": {
+      "purpose": "quick_reference_guide",
+      "importance": "high",
+      "audience": ["all_users", "first_time_visitors"],
+      "content": [
+        "summary_tables",
+        "links_to_detailed_docs",
+        "getting_started",
+        "quick_wins"
+      ]
+    },
+    "TOP-50-PRIORIDADES.md": {
+      "purpose": "prioritized_action_list",
+      "importance": "high",
+      "audience": ["students", "action_oriented_users"],
+      "content": [
+        "immediate_wins",
+        "first_week_activities",
+        "first_month_goals",
+        "long_term_strategy"
+      ]
+    }
+  },
+
+  "project_evolution": {
+    "v1": {
+      "date": "2025-10-08",
+      "status": "initial_but_flawed",
+      "problems": [
+        "too_broad_25_categories",
+        "shallow_tech_content",
+        "deviated_from_intent"
+      ]
+    },
+    "v2": {
+      "date": "2025-01-08",
+      "status": "reorganized_and_refocused",
+      "improvements": [
+        "tech_deep_focus_only",
+        "62KB_technical_documentation",
+        "improved_structure",
+        "added_mcps_apis_certs_data_ml"
+      ]
+    }
+  },
+
+  "navigation_flow": {
+    "entry_point": "01-VISAO-GERAL",
+    "first_reads": [
+      "GUIA-COMPLETO.md",
+      "TOP-50-PRIORIDADES.md",
+      "ECONOMIA-CALCULADA.md"
+    ],
+    "then_navigate_to": [
+      "00-FUNDAMENTOS (context)",
+      "02-GITHUB-EDUCATION (github_pack)",
+      "03-GITHUB-SKILLS (techniques)",
+      "04-TECH-PROFUNDO (deep_dives)"
+    ]
+  },
+
+  "ai_agent_instructions": {
+    "reading_priority": [
+      "01-VISAO-GERAL/OVERVIEW.md",
+      "01-VISAO-GERAL/.ai-guide.json",
+      "01-VISAO-GERAL/PROCESSO-EXECUTIVO.md"
+    ],
+    "when_to_consult": [
+      "understanding_project_scope",
+      "getting_high_level_overview",
+      "understanding_economic_value",
+      "learning_project_history",
+      "finding_navigation_paths"
+    ],
+    "operations": {
+      "read_only": false,
+      "update_frequency": "monthly",
+      "can_update": [
+        "ECONOMIA-CALCULADA.md",
+        "TOP-50-PRIORIDADES.md",
+        "GUIA-COMPLETO.md"
+      ],
+      "preserve": [
+        "PROCESSO-EXECUTIVO.md (historical_record)"
+      ]
+    }
+  },
+
+  "target_audience_details": {
+    "students": {
+      "level": ["undergraduate", "graduate", "phd"],
+      "location": "brazil_primary_global_secondary",
+      "interests": [
+        "software_development",
+        "cloud_computing",
+        "machine_learning",
+        "research",
+        "certifications"
+      ]
+    },
+    "first_time_visitors": {
+      "needs": [
+        "quick_overview",
+        "value_proposition",
+        "getting_started_guide",
+        "navigation_help"
+      ],
+      "recommended_path": "GUIA-COMPLETO → TOP-50 → specific folders"
+    },
+    "returning_users": {
+      "needs": [
+        "what_changed",
+        "new_content",
+        "updated_values",
+        "navigation_to_specific_topics"
+      ],
+      "recommended_path": "CHANGELOG → PROCESSO-EXECUTIVO → specific docs"
+    }
+  },
+
+  "content_focus": {
+    "included": [
+      "github_education_pack",
+      "model_context_protocol_mcp",
+      "cloud_computing_credits",
+      "ai_llm_access",
+      "professional_certifications",
+      "ml_data_science_tools"
+    ],
+    "excluded": [
+      "general_student_benefits",
+      "transportation_discounts",
+      "housing_programs",
+      "food_vouchers",
+      "entertainment_subscriptions"
+    ],
+    "rationale": "tech_deep_not_broad"
+  },
+
+  "related_folders": [
+    {
+      "path": "00-FUNDAMENTOS",
+      "relationship": "provides_historical_context_and_original_data",
+      "when_to_read": "understanding_why_decisions_were_made"
+    },
+    {
+      "path": "02-GITHUB-EDUCATION",
+      "relationship": "detailed_github_education_pack_documentation",
+      "when_to_read": "maximizing_github_student_benefits"
+    },
+    {
+      "path": "03-GITHUB-SKILLS",
+      "relationship": "github_and_copilot_technical_capabilities",
+      "when_to_read": "learning_advanced_github_techniques"
+    },
+    {
+      "path": "04-TECH-PROFUNDO",
+      "relationship": "deep_technical_documentation_of_tools",
+      "when_to_read": "need_detailed_tool_specific_info"
+    }
+  ],
+
+  "maintenance_schedule": {
+    "monthly": [
+      "review_priorities",
+      "update_economics",
+      "check_new_programs"
+    ],
+    "quarterly": [
+      "add_new_tools",
+      "verify_all_links",
+      "update_values"
+    ],
+    "annually": [
+      "major_version_update_if_needed",
+      "comprehensive_audit",
+      "restructure_if_scope_changes"
+    ]
+  },
+
+  "metadata": {
+    "folder_renamed_from": "00-VISAO-GERAL",
+    "rename_reason": "logical_ordering_01_for_overview_after_00_foundations",
+    "last_major_update": "2025-01-08",
+    "version": "1.0.0",
+    "importance": "critical_entry_point"
+  }
+}

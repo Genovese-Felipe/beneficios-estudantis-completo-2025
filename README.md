@@ -22,32 +22,48 @@ Este repositório documenta ferramentas profissionais, cloud computing, IA/LLMs,
 - ✅ **Ferramentas Dev**: JetBrains, VS Code, Docker, todas grátis
 - ✅ **Foco no Brasil**: Programas nacionais, supercomputadores, bolsas
 
-## 📚 Documentação Principal
+## 📚 Estrutura do Repositório
 
-### 🔥 Tech-Profundo (Conteúdo Expandido)
+### 00-FUNDAMENTOS (Fundamentos)
+Conversas originais e dados extraídos que fundamentam todo o projeto
+- **conversas/**: Registros completos das discussões originais (11.507 linhas)
+- **dados-extraidos/**: Dados estruturados e limpos para análise avançada
 
-Documentos técnicos aprofundados com tutoriais práticos, exemplos de código e comparações detalhadas:
+### 01-VISAO-GERAL (Visão Geral)
+Documentos executivos, prioridades e economia calculada
+- **[GUIA-COMPLETO.md](01-VISAO-GERAL/GUIA-COMPLETO.md)**: Visão geral de todas as categorias
+- **[TOP-50-PRIORIDADES.md](01-VISAO-GERAL/TOP-50-PRIORIDADES.md)**: O que fazer primeiro
+- **[ECONOMIA-CALCULADA.md](01-VISAO-GERAL/ECONOMIA-CALCULADA.md)**: Breakdown detalhado
+- **[PROCESSO-EXECUTIVO.md](01-VISAO-GERAL/PROCESSO-EXECUTIVO.md)**: Processo de reorganização
+
+### 02-GITHUB-EDUCATION (GitHub Education Pack)
+Documentação profunda sobre GitHub Education Pack e benefícios estudantis
+- GitHub Copilot gratuito (R$ 500-1.200/ano)
+- 80+ ferramentas parceiras
+- Guias de aplicação e verificação
+- **Economia**: R$ 75.000 - 125.000/ano
+
+### 03-GITHUB-SKILLS (Habilidades GitHub)
+Técnicas validadas de GitHub e Copilot identificadas neste projeto
+- Métodos de análise profunda de contexto
+- Reorganização estrutural de projetos
+- Documentação multilíngue
+- Extração e validação de dados
+
+### 04-TECH-PROFUNDO (Tech Profundo)
+Documentos técnicos aprofundados com tutoriais práticos e exemplos
 
 | Documento | Descrição | Tamanho | Economia/ano |
 |-----------|-----------|---------|--------------|
-| **[MCPS-APIS.md](01-TECH-PROFUNDO/MCPS-APIS.md)** | Model Context Protocol, GitHub Copilot, APIs gratuitas | 11 KB | R$ 33k-73k |
-| **[CERTIFICATIONS-TECH.md](01-TECH-PROFUNDO/CERTIFICATIONS-TECH.md)** | Certificações cloud, DevOps, ML com descontos | 16 KB | R$ 20k-30k |
-| **[DATA-ML-TOOLS.md](01-TECH-PROFUNDO/DATA-ML-TOOLS.md)** | GPUs grátis, MLOps, datasets, deployment | 19 KB | R$ 66k-136k |
-| [AI-LLMS.md](01-TECH-PROFUNDO/AI-LLMS.md) | Modelos de IA e LLMs para estudantes | 4 KB | R$ 6k-10k |
-| [CLOUD-COMPUTE.md](01-TECH-PROFUNDO/CLOUD-COMPUTE.md) | Azure, GCP, AWS setup completo | 3 KB | R$ 8k-10k |
-| [DEV-TOOLS.md](01-TECH-PROFUNDO/DEV-TOOLS.md) | IDEs, editores, ferramentas desenvolvimento | 3 KB | R$ 10k-15k |
-| [CURSOS-TECH.md](01-TECH-PROFUNDO/CURSOS-TECH.md) | Melhores cursos técnicos gratuitos/descontados | - | R$ 5k-10k |
+| **[MCPS-APIS.md](04-TECH-PROFUNDO/MCPS-APIS.md)** | Model Context Protocol, GitHub Copilot, APIs gratuitas | 11 KB | R$ 33k-73k |
+| **[CERTIFICATIONS-TECH.md](04-TECH-PROFUNDO/CERTIFICATIONS-TECH.md)** | Certificações cloud, DevOps, ML com descontos | 16 KB | R$ 20k-30k |
+| **[DATA-ML-TOOLS.md](04-TECH-PROFUNDO/DATA-ML-TOOLS.md)** | GPUs grátis, MLOps, datasets, deployment | 19 KB | R$ 15k-25k |
+| [AI-LLMS.md](04-TECH-PROFUNDO/AI-LLMS.md) | Modelos de IA e LLMs para estudantes | 4 KB | R$ 6k-10k |
+| [CLOUD-COMPUTE.md](04-TECH-PROFUNDO/CLOUD-COMPUTE.md) | Azure, GCP, AWS setup completo | 3 KB | R$ 20k-30k |
+| [DEV-TOOLS.md](04-TECH-PROFUNDO/DEV-TOOLS.md) | IDEs, editores, ferramentas desenvolvimento | 3 KB | R$ 10k-15k |
+| [CURSOS-TECH.md](04-TECH-PROFUNDO/CURSOS-TECH.md) | Melhores cursos técnicos gratuitos/descontados | - | R$ 5k-10k |
 
-**Total Tech-Profundo**: 65+ KB de conteúdo técnico, 50+ exemplos de código, 25+ tabelas comparativas
-
-### 📋 Visão Geral
-
-Documentos para navegação e planejamento:
-
-- **[GUIA-COMPLETO.md](GUIA-COMPLETO.md)**: Visão geral de todas as categorias
-- **[TOP-50-PRIORIDADES.md](TOP-50-PRIORIDADES.md)**: O que fazer primeiro (hoje, semana, mês)
-- **[ECONOMIA-CALCULADA.md](ECONOMIA-CALCULADA.md)**: Breakdown detalhado de economias
-- **[00-VISAO-GERAL/](00-VISAO-GERAL/)**: Checklists, Brasil-específico, processo executivo
+**Total Tech-Profundo**: 62KB de conteúdo técnico, 50+ exemplos de código, 25+ tabelas comparativas
 
 ## ⚡ Quick Start (Ação Imediata)
 

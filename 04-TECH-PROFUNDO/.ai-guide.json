@@ -1,0 +1,359 @@
+{
+  "folder": "04-TECH-PROFUNDO",
+  "version": "1.0.0",
+  "last_updated": "2025-01-08",
+  "purpose": "Deep technical documentation on tools and platforms",
+  "target_audience": ["students", "developers", "researchers", "ai_agents"],
+  
+  "content_overview": {
+    "total_size": "62KB",
+    "total_documents": 7,
+    "quality": "comprehensive_with_practical_examples",
+    "focus": "tech_deep_not_broad"
+  },
+
+  "documents": {
+    "MCPS-APIS.md": {
+      "size_kb": 11,
+      "lines": 429,
+      "topics": [
+        "model_context_protocol",
+        "github_copilot_mcp_integration",
+        "mcp_servers",
+        "student_api_credits"
+      ],
+      "apis_covered": [
+        "openai",
+        "claude_anthropic",
+        "google_gemini",
+        "cohere",
+        "huggingface"
+      ],
+      "economic_value": {
+        "min_brl": 33000,
+        "max_brl": 73000
+      }
+    },
+    "CERTIFICATIONS-TECH.md": {
+      "size_kb": 16,
+      "lines": 615,
+      "categories": [
+        "cloud_computing",
+        "devops",
+        "security",
+        "machine_learning"
+      ],
+      "providers": [
+        "aws",
+        "azure",
+        "gcp",
+        "kubernetes",
+        "docker",
+        "comptia",
+        "isc2"
+      ],
+      "includes": "1_year_roadmap",
+      "economic_value": {
+        "min_brl": 20000,
+        "max_brl": 30000
+      }
+    },
+    "DATA-ML-TOOLS.md": {
+      "size_kb": 19,
+      "lines": 710,
+      "categories": [
+        "gpu_access",
+        "mlops_platforms",
+        "notebooks_ides",
+        "datasets",
+        "visualization",
+        "frameworks",
+        "deployment"
+      ],
+      "free_gpu_providers": [
+        "google_colab",
+        "kaggle",
+        "sagemaker_lab",
+        "paperspace",
+        "lightning_ai"
+      ],
+      "mlops_platforms": [
+        "weights_and_biases",
+        "neptune",
+        "mlflow",
+        "dvc",
+        "comet"
+      ],
+      "economic_value": {
+        "min_brl": 15000,
+        "max_brl": 25000
+      }
+    },
+    "AI-LLMS.md": {
+      "topics": [
+        "llm_api_access",
+        "free_tiers",
+        "student_credits",
+        "use_cases",
+        "integration_examples",
+        "cost_optimization"
+      ],
+      "providers": [
+        "openai",
+        "anthropic_claude",
+        "google_gemini",
+        "cohere"
+      ]
+    },
+    "CLOUD-COMPUTE.md": {
+      "platforms": [
+        "microsoft_azure",
+        "google_cloud",
+        "aws"
+      ],
+      "student_credits": {
+        "azure": 100,
+        "gcp": 300,
+        "aws": "50-200"
+      },
+      "includes": [
+        "setup_guides",
+        "optimization_strategies",
+        "cost_management"
+      ],
+      "economic_value": {
+        "min_brl": 20000,
+        "max_brl": 30000
+      }
+    },
+    "DEV-TOOLS.md": {
+      "categories": [
+        "ides",
+        "github_copilot",
+        "containerization",
+        "version_control",
+        "ci_cd"
+      ],
+      "major_tools": [
+        "jetbrains_all_products",
+        "github_copilot",
+        "visual_studio",
+        "docker",
+        "kubernetes"
+      ]
+    },
+    "CURSOS-TECH.md": {
+      "platforms": [
+        "datacamp",
+        "educative",
+        "frontend_masters",
+        "coursera",
+        "edx",
+        "udacity"
+      ],
+      "includes": [
+        "cloud_provider_training",
+        "specialized_bootcamps",
+        "free_and_discounted_options"
+      ]
+    }
+  },
+
+  "economic_summary": {
+    "total_annual_savings": {
+      "min_brl": 88000,
+      "max_brl": 158000
+    },
+    "breakdown": {
+      "mcps_apis": {"min": 33000, "max": 73000},
+      "certifications": {"min": 20000, "max": 30000},
+      "data_ml_tools": {"min": 15000, "max": 25000},
+      "cloud_compute": {"min": 20000, "max": 30000}
+    }
+  },
+
+  "content_structure_standard": {
+    "sections": [
+      "overview",
+      "detailed_content",
+      "practical_guides",
+      "economics",
+      "resources"
+    ],
+    "includes": [
+      "comprehensive_explanations",
+      "comparison_tables",
+      "code_examples",
+      "configuration_guides",
+      "getting_started",
+      "troubleshooting"
+    ]
+  },
+
+  "target_audience_details": {
+    "students": {
+      "majors": [
+        "computer_science",
+        "data_science",
+        "software_engineering",
+        "research"
+      ],
+      "levels": [
+        "undergraduate",
+        "graduate",
+        "phd",
+        "self_taught"
+      ]
+    },
+    "developers": {
+      "levels": ["junior", "mid", "senior"],
+      "categories": [
+        "career_changers",
+        "freelancers",
+        "startup_founders",
+        "open_source_contributors"
+      ]
+    },
+    "researchers": {
+      "types": [
+        "academic_research",
+        "industry_research",
+        "phd_candidates",
+        "postdocs"
+      ]
+    }
+  },
+
+  "usage_guidelines": {
+    "for_learning": [
+      "start_with_tool_overviews",
+      "follow_getting_started_sections",
+      "implement_practical_examples",
+      "join_communities"
+    ],
+    "for_career": [
+      "prioritize_certifications",
+      "build_portfolio_with_free_tools",
+      "contribute_to_open_source",
+      "participate_in_competitions"
+    ],
+    "for_research": [
+      "leverage_gpu_access",
+      "use_mlops_for_experiments",
+      "access_academic_datasets",
+      "deploy_models_free_hosting"
+    ]
+  },
+
+  "ai_agent_instructions": {
+    "reading_priority": [
+      "04-TECH-PROFUNDO/OVERVIEW.md",
+      "04-TECH-PROFUNDO/.ai-guide.json",
+      "specific_document_based_on_query"
+    ],
+    "when_to_consult": [
+      "detailed_tool_information_needed",
+      "specific_technical_guidance",
+      "configuration_examples",
+      "economic_value_of_specific_tools",
+      "comprehensive_feature_comparisons"
+    ],
+    "operations": {
+      "read_only": false,
+      "update_frequency": "quarterly",
+      "can_update": "all_technical_documents",
+      "must_verify": [
+        "links_still_working",
+        "pricing_current",
+        "student_eligibility_unchanged",
+        "tools_not_discontinued"
+      ]
+    }
+  },
+
+  "content_generation_process": {
+    "steps": [
+      "source_analysis_from_conversations",
+      "cross_validation_with_official_docs",
+      "structured_writing_consistent_format",
+      "practical_focus_real_world_examples",
+      "economic_calculation_precise_values",
+      "quality_review_multiple_passes"
+    ],
+    "validation_methods": [
+      "check_against_original_conversations",
+      "verify_with_official_documentation",
+      "test_code_examples",
+      "calculate_economics_independently",
+      "review_for_consistency"
+    ]
+  },
+
+  "maintenance_schedule": {
+    "quarterly": [
+      "check_new_tools_services",
+      "verify_links",
+      "update_pricing_if_changed"
+    ],
+    "annually": [
+      "comprehensive_link_check",
+      "value_verification",
+      "major_platform_changes"
+    ],
+    "as_needed": [
+      "new_tool_additions",
+      "discontinued_service_removals",
+      "major_feature_updates"
+    ],
+    "update_checklist": [
+      "verify_all_links_working",
+      "update_pricing_if_changed",
+      "add_new_tools_services",
+      "remove_discontinued_services",
+      "update_code_examples_latest_versions",
+      "check_student_eligibility_requirements"
+    ]
+  },
+
+  "related_folders": [
+    {
+      "path": "00-FUNDAMENTOS",
+      "relationship": "original_research_data_source",
+      "flow": "00-FUNDAMENTOS (conversations) → 04-TECH-PROFUNDO (documentation)"
+    },
+    {
+      "path": "01-VISAO-GERAL",
+      "relationship": "provides_high_level_summaries",
+      "flow": "04-TECH-PROFUNDO (details) → 01-VISAO-GERAL (summaries)"
+    },
+    {
+      "path": "02-GITHUB-EDUCATION",
+      "relationship": "github_specific_tools",
+      "flow": "02-GITHUB-EDUCATION (github) ⟷ 04-TECH-PROFUNDO (all tools)"
+    },
+    {
+      "path": "03-GITHUB-SKILLS",
+      "relationship": "how_to_use_these_tools",
+      "flow": "04-TECH-PROFUNDO (what tools) ← 03-GITHUB-SKILLS (how to use)"
+    }
+  ],
+
+  "future_expansions": {
+    "planned_documents": [
+      "RESEARCH-PROGRAMS.md",
+      "OPENSOURCE-CONTRIBUTIONS.md",
+      "HACKATHONS-COMPETITIONS.md",
+      "NETWORKING-COMMUNITIES.md"
+    ],
+    "estimated_timeline": "Q1-Q2_2025"
+  },
+
+  "metadata": {
+    "folder_renamed_from": "01-TECH-PROFUNDO",
+    "rename_reason": "logical_ordering_04_after_overview_github_skills",
+    "content_created": "2025-01-08",
+    "last_major_update": "2025-01-08",
+    "version": "1.0.0",
+    "importance": "high_technical_value"
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "folder": "00-FUNDAMENTOS",
+  "version": "1.0.0",
+  "last_updated": "2025-01-08",
+  "purpose": "Foundation and historical records",
+  "target_audience": ["ai_agents", "developers", "researchers"],
+  
+  "structure": {
+    "conversas": {
+      "type": "subfolder",
+      "description": "Original conversation logs that shaped the project",
+      "formats": ["markdown", "pdf", "docx"],
+      "primary_content": "Servidor MCP e Beneficios Estudante Github Copilot discussions",
+      "line_count": 11507,
+      "key_topics": [
+        "Model Context Protocol (MCP)",
+        "GitHub Copilot integration",
+        "GitHub Education Pack",
+        "Student benefits and tools",
+        "Cloud computing credits",
+        "API access and LLMs",
+        "Certifications and courses"
+      ]
+    },
+    "dados-extraidos": {
+      "type": "subfolder",
+      "description": "Clean, structured data extracted from conversations",
+      "formats": ["json", "yaml", "markdown"],
+      "machine_readable": true,
+      "purpose": "Enable advanced analysis and AI processing"
+    }
+  },
+
+  "key_insights": {
+    "core_focus": "Tech-deep content focused on GitHub Education Pack",
+    "economic_value": {
+      "currency": "BRL",
+      "annual_savings": {
+        "min": 137000,
+        "max": 264000
+      }
+    },
+    "target_region": "Brazil",
+    "language": "Portuguese with English documentation",
+    "evolution": {
+      "v1": "Too broad - 25 categories",
+      "v2": "Refocused - Tech-deep content only"
+    }
+  },
+
+  "ai_agent_instructions": {
+    "reading_priority": [
+      "00-FUNDAMENTOS/OVERVIEW.md",
+      "00-FUNDAMENTOS/dados-extraidos/",
+      "00-FUNDAMENTOS/README.md",
+      "00-FUNDAMENTOS/PROTOCOLS.md"
+    ],
+    "when_to_consult": [
+      "Understanding project origins",
+      "Clarifying design decisions",
+      "Extracting research data",
+      "Validating technical details",
+      "Understanding user intent"
+    ],
+    "operations": {
+      "read_only": true,
+      "do_not_modify": ["conversas/*"],
+      "can_add_to": ["dados-extraidos/"],
+      "requires_backup": true
+    }
+  },
+
+  "data_extraction_guidelines": {
+    "source": "conversas/*.md",
+    "output_location": "dados-extraidos/",
+    "formats": {
+      "tools": "JSON list with name, description, url, category, free_tier",
+      "topics": "JSON with hierarchy and relationships",
+      "economics": "JSON with calculations breakdown",
+      "recommendations": "Structured markdown with priorities"
+    },
+    "validation": "Cross-reference with existing documentation in 01-VISAO-GERAL and 04-TECH-PROFUNDO"
+  },
+
+  "protocols": {
+    "transparency": "All conversations kept for audit trail",
+    "immutability": "Original records never modified",
+    "versioning": "Semantic versioning for extracted data",
+    "documentation": "All changes logged in CHANGELOG.md"
+  },
+
+  "related_folders": [
+    {
+      "path": "01-VISAO-GERAL",
+      "relationship": "Derives executive summaries from foundations",
+      "flow": "00-FUNDAMENTOS → 01-VISAO-GERAL"
+    },
+    {
+      "path": "02-GITHUB-EDUCATION", 
+      "relationship": "Specific GitHub Education content extracted from conversations",
+      "flow": "00-FUNDAMENTOS → 02-GITHUB-EDUCATION"
+    },
+    {
+      "path": "03-GITHUB-SKILLS",
+      "relationship": "GitHub technical capabilities documented from Copilot usage",
+      "flow": "00-FUNDAMENTOS + project_history → 03-GITHUB-SKILLS"
+    },
+    {
+      "path": "04-TECH-PROFUNDO",
+      "relationship": "Deep technical documentation based on research",
+      "flow": "00-FUNDAMENTOS/dados-extraidos → 04-TECH-PROFUNDO"
+    }
+  ],
+
+  "metadata": {
+    "folder_renamed_from": "99-REGISTROS-HISTORICOS",
+    "rename_reason": "Logical ordering - foundations should be first (00) not last (99)",
+    "creation_date": "2025-10-08",
+    "reorganization_date": "2025-01-08",
+    "original_creator": "Genovese-Felipe",
+    "reorganization_by": "GitHub Copilot AI Agent"
+  }
+}
