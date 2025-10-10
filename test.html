@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test for Economy Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Testing Economy Calculator</h1>
+    <div id="test-results"></div>
+
+    <!-- Include the main HTML content to be tested -->
+    <div id="app-container" style="display: none;">
+        <!-- The content of index.html will be loaded here -->
+    </div>
+
+    <!-- Include the script that contains the functions to be tested -->
+    <script src="script.js"></script>
+
+    <script>
+        // Test runner
+        document.addEventListener('DOMContentLoaded', () => {
+            const resultsContainer = document.getElementById('test-results');
+
+            // --- Test Case 1: Check if economy value is calculated and displayed correctly ---
+            const runTest = () => {
+                const economyElement = document.querySelector('.economy-value');
+                let testResult = '';
+
+                if (economyElement) {
+                    const expectedValue = "R$ 20.000+";
+                    const actualValue = economyElement.textContent.trim();
+
+                    // The calculated value should be "R$ 20.000+"
+                    if (actualValue.startsWith("R$") && actualValue.endsWith("+")) {
+                        // Extract the number for comparison
+                        const numericValue = parseInt(actualValue.replace(/[^0-9]/g, ''));
+                        if (numericValue >= 20000) {
+                            testResult = `<p style="color: green;">Test Passed: Economy value is displayed correctly. Found: ${actualValue}</p>`;
+                        } else {
+                            testResult = `<p style="color: red;">Test Failed: Economy value (${actualValue}) is less than expected.</p>`;
+                        }
+                    } else {
+                        testResult = `<p style="color: red;">Test Failed: Incorrect format for economy value. Expected format like 'R$ 20.000+', but got '${actualValue}'.</p>`;
+                    }
+                } else {
+                    testResult = `<p style="color: red;">Test Failed: The element with class 'economy-value' was not found.</p>`;
+                }
+                resultsContainer.innerHTML = testResult;
+            };
+
+            // Load index.html content into the test page
+            fetch('index.html')
+                .then(response => response.text())
+                .then(html => {
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(html, 'text/html');
+                    const appContainer = document.getElementById('app-container');
+
+                    // Move the relevant part of the DOM
+                    const heroSection = doc.querySelector('.hero');
+                    if(heroSection) {
+                         // We need to manually re-create the element in the current document for scripts to execute on it
+                        const newHero = document.createElement('div');
+                        newHero.innerHTML = heroSection.innerHTML;
+                        document.body.appendChild(newHero);
+
+                        // Re-run the display function to populate the value
+                        displayEconomy();
+                        runTest();
+                    } else {
+                        resultsContainer.innerHTML = '<p style="color: red;">Test Setup Failed: Could not find .hero section in index.html</p>';
+                    }
+                })
+                .catch(error => {
+                    resultsContainer.innerHTML = `<p style="color: red;">Test Setup Failed: Could not load index.html. ${error}</p>`;
+                });
+        });
+    </script>
+</body>
+</html>
