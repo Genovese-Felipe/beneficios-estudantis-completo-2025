@@ -147,25 +147,28 @@ function initMobileMenu() {
     const navMenu = document.getElementById('nav-menu');
     
     if (navToggle) {
-        navToggle.addEventListener('click', function() {
+        navToggle.addEventListener('click', function(e) {
+            e.stopPropagation(); // Prevent this click from being handled by the document's listener
             navMenu.classList.toggle('show');
         });
-    }
-    
-    // Close mobile menu when clicking on a link
-    const navLinks = document.querySelectorAll('.nav__link');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            navMenu.classList.remove('show');
+
+        // Close mobile menu when a link is clicked
+        const navLinks = document.querySelectorAll('.nav__link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('show');
+            });
         });
-    });
-    
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(e) {
-        if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
-            navMenu.classList.remove('show');
-        }
-    });
+
+        // Close mobile menu when clicking anywhere outside of the menu itself
+        document.addEventListener('click', function(e) {
+            // We don't need to check for the toggle button because its clicks are stopped from bubbling up.
+            // We just need to check if the menu is open and the click was outside of it.
+            if (navMenu.classList.contains('show') && !navMenu.contains(e.target)) {
+                navMenu.classList.remove('show');
+            }
+        });
+    }
 }
 
 // Animation on scroll
